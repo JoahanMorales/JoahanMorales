@@ -80,7 +80,13 @@ public class JoahanMorales {
 ## Estadísticas de GitHub
 
 <div align="center">
-  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=default&hide_border=true&background=FFFFFF&stroke=9D4EDD&ring=C77DFF&fire=9D4EDD&currStreakLabel=9D4EDD&sideLabels=9D4EDD&currStreakNum=C77DFF&sideNums=C77DFF" />
+  
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=radical&hide_border=true&background=0D1117&stroke=9D4EDD&ring=C77DFF&fire=9D4EDD&currStreakLabel=9D4EDD&sideLabels=9D4EDD&currStreakNum=C77DFF&sideNums=C77DFF" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=default&hide_border=true&background=FFFFFF&stroke=9D4EDD&ring=C77DFF&fire=9D4EDD&currStreakLabel=9D4EDD&sideLabels=9D4EDD&currStreakNum=C77DFF&sideNums=C77DFF" />
+  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=default&hide_border=true&background=FFFFFF&stroke=9D4EDD&ring=C77DFF&fire=9D4EDD&currStreakLabel=9D4EDD&sideLabels=9D4EDD&currStreakNum=C77DFF&sideNums=C77DFF" alt="GitHub Streak" />
+</picture>
+
 </div>
 
 <div align="center">
