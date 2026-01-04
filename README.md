@@ -8,7 +8,7 @@
 
 ## Sobre mí
 
-<img align="right" alt="Coding Cat" width="380" src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif">
+<img align="right" alt="Black Cat Coding" width="380" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif">
 
 Soy un desarrollador backend apasionado por Java, con formación técnica en programación y actualmente cursando Ingeniería en Informática. Me especializo en construir sistemas escalables y eficientes que resuelven problemas reales.
 
