@@ -80,11 +80,11 @@ public class JoahanMorales {
 ## Estadísticas de GitHub
 
 <div align="center">
-  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=tokyonight&hide_border=true" />
+  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=radical&hide_border=true&background=0D1117&stroke=9D4EDD&ring=C77DFF&fire=E0AAFF&currStreakLabel=E0AAFF&sideLabels=9D4EDD&currStreakNum=C77DFF&sideNums=C77DFF" />
 </div>
 
 <div align="center">
-  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=tokyonight" />
+  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=radical" />
 </div>
 
 ## Proyectos Destacados
