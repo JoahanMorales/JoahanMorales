@@ -80,11 +80,11 @@ public class JoahanMorales {
 ## Estadísticas de GitHub
 
 <div align="center">
-  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=radical&hide_border=true&background=0D1117&stroke=9D4EDD&ring=C77DFF&fire=E0AAFF&currStreakLabel=E0AAFF&sideLabels=9D4EDD&currStreakNum=C77DFF&sideNums=C77DFF" />
+  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=default&hide_border=true&background=FFFFFF&stroke=9D4EDD&ring=C77DFF&fire=9D4EDD&currStreakLabel=9D4EDD&sideLabels=9D4EDD&currStreakNum=C77DFF&sideNums=C77DFF" />
 </div>
 
 <div align="center">
-  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=radical" />
+  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=default" />
 </div>
 
 ## Proyectos Destacados
@@ -152,4 +152,10 @@ public class JoahanMorales {
 
 <img src="https://komarev.com/ghpvc/?username=JoahanMorales&label=VISITAS&color=9D4EDD&style=for-the-badge" alt="Profile views" />
 
+</div>
+
+<div align="center">
+  
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=9D4EDD&height=120&section=footer" width="100%"/>
+  
 </div>
