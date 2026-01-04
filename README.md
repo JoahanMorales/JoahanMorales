@@ -84,7 +84,7 @@ public class JoahanMorales {
 </div>
 
 <div align="center">
-  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=default" />
+  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=dracula" />
 </div>
 
 ## Proyectos Destacados
