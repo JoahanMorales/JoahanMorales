@@ -81,15 +81,7 @@ public class JoahanMorales {
 
 <div align="center">
   <img width="49%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=tokyonight&hide_border=true" />
-  <img width="49%" src="https://github-contributor-stats.vercel.app/api?username=JoahanMorales&theme=tokyonight&hide_border=true" />
-</div>
-
-<div align="center">
-  <img width="70%" src="https://github-readme-activity-graph.vercel.app/graph?username=JoahanMorales&custom_title=Grafico%20de%20Contribuciones&bg_color=1a1b27&color=70a5fd&line=bf91f3&point=38bdae&area_color=bf91f3&title_color=70a5fd&area=true&hide_border=true" />
-</div>
-
-<div align="center">
-  <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=tokyonight" />
+  <img width="49%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=tokyonight" />
 </div>
 
 ## Proyectos Destacados
