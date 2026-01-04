@@ -80,17 +80,16 @@ public class JoahanMorales {
 ## Estadísticas de GitHub
 
 <div align="center">
-  <img width="49%" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=JoahanMorales&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
   <img width="49%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=tokyonight&hide_border=true" />
-</div>
-
-<div align="center">
-  <img width="49%" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=JoahanMorales&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" />
   <img width="49%" src="https://github-contributor-stats.vercel.app/api?username=JoahanMorales&theme=tokyonight&hide_border=true" />
 </div>
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=JoahanMorales&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=15&title=Stars,Followers,Commits,Repositories,MultipleLang,PullRequest,Issues" />
+  <img width="70%" src="https://github-readme-activity-graph.vercel.app/graph?username=JoahanMorales&custom_title=Grafico%20de%20Contribuciones&bg_color=1a1b27&color=70a5fd&line=bf91f3&point=38bdae&area_color=bf91f3&title_color=70a5fd&area=true&hide_border=true" />
+</div>
+
+<div align="center">
+  <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=tokyonight" />
 </div>
 
 ## Proyectos Destacados
