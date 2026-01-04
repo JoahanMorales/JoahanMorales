@@ -4,7 +4,7 @@
   
   [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=9D4EDD&center=true&vCenter=true&width=500&lines=Backend+Developer+%F0%9F%9A%80;Estudiante+de+Ingenier%C3%ADa+Inform%C3%A1tica;Especialista+en+Java+%26+Spring+Boot;Apasionado+por+crear+soluciones+escalables)](https://git.io/typing-svg)
   
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
+  <img src="https://user-images.githubusercontent.com/74038190/212750147-854a394f-fee9-4080-9770-78a4b7ece53f.gif" width="400">
   
 </div>
 
@@ -74,25 +74,29 @@ public class JoahanMorales {
 
 </div>
 
-<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="400">
+</div>
 
 ## 📊 Estadísticas de GitHub
 
 <div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=JoahanMorales&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=9D4EDD&icon_color=C77DFF&text_color=E0AAFF&ring_color=9D4EDD" alt="Joahan's GitHub Stats" />
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=JoahanMorales&theme=radical&hide_border=true&background=0D1117&stroke=9D4EDD&ring=C77DFF&fire=E0AAFF&currStreakLabel=E0AAFF&sideLabels=9D4EDD&currStreakNum=C77DFF&sideNums=C77DFF" alt="Joahan's Streak Stats" />
+  <img width="49%" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=JoahanMorales&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
+  <img width="49%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=tokyonight&hide_border=true" />
 </div>
 
 <div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JoahanMorales&theme=radical&hide_border=true&bg_color=0D1117&title_color=9D4EDD&text_color=E0AAFF&layout=compact&langs_count=10" alt="Top Languages" />
-  <img width="49%" src="https://github-readme-activity-graph.vercel.app/graph?username=JoahanMorales&custom_title=Contribuciones&bg_color=0D1117&color=E0AAFF&line=9D4EDD&point=C77DFF&area_color=9D4EDD&area=true&hide_border=true" alt="Activity Graph" />
+  <img width="49%" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=JoahanMorales&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" />
+  <img width="49%" src="https://github-contributor-stats.vercel.app/api?username=JoahanMorales&theme=tokyonight&hide_border=true" />
 </div>
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=JoahanMorales&theme=radical&no-frame=true&no-bg=true&row=1&column=7&margin-w=15&title=Stars,Followers,Commits,Repositories,MultipleLang,PullRequest,Issues" />
+  <img src="https://github-profile-trophy.vercel.app/?username=JoahanMorales&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=15&title=Stars,Followers,Commits,Repositories,MultipleLang,PullRequest,Issues" />
 </div>
 
-<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="400">
+</div>
 
 ## 🎯 Proyectos Destacados
 
@@ -143,14 +147,16 @@ public class JoahanMorales {
 
 </div>
 
-<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="400">
+</div>
 
 ## 📫 Conecta conmigo
 
 <div align="center">
   
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joahan-morales/)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tu-email@gmail.com)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:joahanmorales07@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JoahanMorales)
 
 </div>
@@ -158,26 +164,12 @@ public class JoahanMorales {
 ---
 
 <div align="center">
-  
-### 💭 Pensamiento del Día
-  
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&border=true&borderColor=9D4EDD" alt="Random Dev Quote"/>
-
-<br/>
-<br/>
-
-### 📊 Visitas al Perfil
 
 <img src="https://komarev.com/ghpvc/?username=JoahanMorales&label=VISITAS&color=9D4EDD&style=for-the-badge" alt="Profile views" />
 
-</div>
+<br/>
+<br/>
 
----
-
-<div align="center">
-  
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=9D4EDD&height=100&section=footer" width="100%"/>
-  
-  ### 💜 *"Primero, resuelve el problema. Luego, escribe el código."* – John Johnson
+### 💜 *"Primero, resuelve el problema. Luego, escribe el código."* – John Johnson
   
 </div>
