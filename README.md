@@ -8,7 +8,7 @@
 
 ## Sobre mí
 
-<img align="right" alt="Coding" width="380" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif">
+<img align="right" alt="Coding Cat" width="380" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
 
 Soy un desarrollador backend apasionado por Java, con formación técnica en programación y actualmente cursando Ingeniería en Informática. Me especializo en construir sistemas escalables y eficientes que resuelven problemas reales.
 
@@ -84,7 +84,7 @@ public class JoahanMorales {
 </div>
 
 <div align="center">
-  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=dracula" />
+  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=default" />
 </div>
 
 ## Proyectos Destacados
