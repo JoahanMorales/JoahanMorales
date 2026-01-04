@@ -67,21 +67,19 @@ public class JoahanMorales {
 ## 📊 Estadísticas de GitHub
 
 <div align="center">
-  
-![](https://github-readme-stats.vercel.app/api?username=JoahanMorales&theme=radical&hide_border=false&include_all_commits=true&count_private=true)
+  <img width="49%" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=JoahanMorales&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
+  <img width="49%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=tokyonight&hide_border=true" />
+</div>
 
-![](https://github-readme-streak-stats.herokuapp.com/?user=JoahanMorales&theme=radical&hide_border=false)
-
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=JoahanMorales&theme=radical&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
+<div align="center">
+  <img width="49%" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=JoahanMorales&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" />
+  <img width="49%" src="https://github-contributor-stats.vercel.app/api?username=JoahanMorales&theme=tokyonight&hide_border=true" />
 </div>
 
 ## 🏆 Logros de GitHub
 
 <div align="center">
-  
-![](https://github-profile-trophy.vercel.app/?username=JoahanMorales&theme=radical&no-frame=false&no-bg=false&margin-w=4)
-
+  <img src="https://github-profile-trophy.vercel.app/?username=JoahanMorales&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=15&margin-h=15" />
 </div>
 
 ## 🎯 Proyectos Destacados
@@ -97,18 +95,20 @@ public class JoahanMorales {
 </div>
 -->
 
-## 📈 Actividad Reciente
+## 📈 Actividad de Código
 
-<!--START_SECTION:activity-->
-<!--END_SECTION:activity-->
+<div align="center">
+  
+[![Joahan's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=JoahanMorales&theme=tokyo-night&hide_border=true)](https://github.com/JoahanMorales)
+
+</div>
 
 ## 📫 Conecta conmigo
 
 <div align="center">
   
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/tu-usuario)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joahan-morales/)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tu-email@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=white)](https://tu-portfolio.com)
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JoahanMorales)
 
 </div>
@@ -119,7 +119,7 @@ public class JoahanMorales {
   
 ### 💭 Cita del Día
   
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
 ### 📊 Contador de Visitas
 
@@ -132,5 +132,3 @@ public class JoahanMorales {
 <div align="center">
   
   **"El código limpio no se escribe siguiendo un conjunto de reglas. No te conviertes en un artesano del software al aprender una lista de heurísticas. El profesionalismo y la artesanía provienen de valores que impulsan disciplinas."** — Robert C. Martin
-  
-</div>
