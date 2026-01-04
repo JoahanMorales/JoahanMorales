@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2E9EF7&center=true&vCenter=true&width=435&lines=Backend+Developer+%F0%9F%9A%80;Estudiante+de+Ingenier%C3%ADa+Inform%C3%A1tica;Apasionado+por+el+desarrollo+backend)
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=2E9EF7&center=true&vCenter=true&width=435&lines=Backend+Developer+%F0%9F%9A%80;Estudiante+de+Ingenier%C3%ADa+Inform%C3%A1tica;Apasionado+por+el+desarrollo+backend)](https://git.io/typing-svg)
   
 </div>
 
@@ -47,12 +47,22 @@ Soy un desarrollador backend especializado en **Java**, con formación técnica 
 
 <div align="center">
   
-  ![Joahan's GitHub stats](https://github-readme-stats.vercel.app/api?username=JoahanMorales&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1b27&title_color=70a5fd&icon_color=bf91f3&text_color=38bdae)
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=JoahanMorales&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=1f6feb&text_color=c9d1d9"/>
   
-  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JoahanMorales&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b27&title_color=70a5fd&text_color=38bdae)
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JoahanMorales&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&langs_count=8"/>
   
-  ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=JoahanMorales&theme=tokyonight&hide_border=true&background=1a1b27&stroke=70a5fd&ring=bf91f3&fire=bf91f3&currStreakLabel=38bdae)
+</div>
 
+<div align="center">
+  
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=JoahanMorales&theme=dark&hide_border=true&background=0d1117&stroke=58a6ff&ring=1f6feb&fire=58a6ff&currStreakLabel=c9d1d9"/>
+
+</div>
+
+<div align="center">
+  
+  <img src="https://github-profile-trophy.vercel.app/?username=JoahanMorales&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=7"/>
+  
 </div>
 
 ## 🎯 Proyectos Destacados
@@ -82,6 +92,6 @@ Breve descripción del proyecto y las tecnologías utilizadas.
   
   💻 *"Code is like humor. When you have to explain it, it's bad."* – Cory House
   
-  ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=JoahanMorales.JoahanMorales)
+  ![](https://komarev.com/ghpvc/?username=JoahanMorales&color=blueviolet&style=flat-square&label=Visitas+al+perfil)
   
 </div>
