@@ -1,18 +1,16 @@
-# <div align="center">👋 Hola, soy Joahan Morales</div>
+# <div align="center">Hola, soy Joahan Morales</div>
 
 <div align="center">
   
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=9D4EDD&center=true&vCenter=true&width=500&lines=Backend+Developer+%F0%9F%9A%80;Estudiante+de+Ingenier%C3%ADa+Inform%C3%A1tica;Especialista+en+Java+%26+Spring+Boot;Apasionado+por+crear+soluciones+escalables)](https://git.io/typing-svg)
-  
-  <img src="https://user-images.githubusercontent.com/74038190/212750147-854a394f-fee9-4080-9770-78a4b7ece53f.gif" width="400">
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=9D4EDD&center=true&vCenter=true&width=500&lines=Backend+Developer;Estudiante+de+Ingenier%C3%ADa+Inform%C3%A1tica;Especialista+en+Java+y+Spring+Boot)](https://git.io/typing-svg)
   
 </div>
 
-## 🚀 Sobre mí
+## Sobre mí
 
-<img align="right" alt="Coding" width="400" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif">
+<img align="right" alt="Coding" width="380" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif">
 
-Soy un **desarrollador backend** apasionado por Java, con formación técnica en programación y actualmente cursando **Ingeniería en Informática**. Me especializo en construir sistemas escalables y eficientes que resuelven problemas reales.
+Soy un desarrollador backend apasionado por Java, con formación técnica en programación y actualmente cursando Ingeniería en Informática. Me especializo en construir sistemas escalables y eficientes que resuelven problemas reales.
 
 ```java
 public class JoahanMorales {
@@ -26,45 +24,50 @@ public class JoahanMorales {
     );
     
     public void currentFocus() {
-        System.out.println("🔭 Spring Boot & Cloud Computing");
-        System.out.println("🌱 Arquitecturas escalables");
-        System.out.println("💡 Clean Code & Best Practices");
+        System.out.println("Spring Boot & Cloud Computing");
+        System.out.println("Arquitecturas escalables");
+        System.out.println("Clean Code & Best Practices");
     }
 }
 ```
 
+- Actualmente trabajando con Java y Spring Boot
+- Aprendiendo arquitecturas de microservicios y cloud computing
+- Interesado en diseño de APIs REST y optimización de bases de datos
+- Estudiante de Ingeniería en Informática
+
 <br clear="right"/>
 
-## 🛠️ Mi Arsenal Tecnológico
+## Stack Tecnológico
 
 <div align="center">
 
-### 💻 Lenguajes de Programación
+### Lenguajes de Programación
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
 
-### 🔧 Backend & Frameworks
+### Backend & Frameworks
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
 ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
 ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white)
 
-### 🎨 Frontend
+### Frontend
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-### 🗄️ Bases de Datos
+### Bases de Datos
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
 
-### ⚙️ Herramientas & DevOps
+### Herramientas & DevOps
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
@@ -74,11 +77,7 @@ public class JoahanMorales {
 
 </div>
 
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="400">
-</div>
-
-## 📊 Estadísticas de GitHub
+## Estadísticas de GitHub
 
 <div align="center">
   <img width="49%" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=JoahanMorales&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
@@ -94,11 +93,7 @@ public class JoahanMorales {
   <img src="https://github-profile-trophy.vercel.app/?username=JoahanMorales&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=15&title=Stars,Followers,Commits,Repositories,MultipleLang,PullRequest,Issues" />
 </div>
 
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="400">
-</div>
-
-## 🎯 Proyectos Destacados
+## Proyectos Destacados
 
 <div align="center">
 
@@ -143,15 +138,11 @@ public class JoahanMorales {
 </table>
 -->
 
-### 🚧 Actualmente trabajando en proyectos personales...
+### Actualmente trabajando en proyectos personales...
 
 </div>
 
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="400">
-</div>
-
-## 📫 Conecta conmigo
+## Conecta conmigo
 
 <div align="center">
   
@@ -167,9 +158,4 @@ public class JoahanMorales {
 
 <img src="https://komarev.com/ghpvc/?username=JoahanMorales&label=VISITAS&color=9D4EDD&style=for-the-badge" alt="Profile views" />
 
-<br/>
-<br/>
-
-### 💜 *"Primero, resuelve el problema. Luego, escribe el código."* – John Johnson
-  
 </div>
