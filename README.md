@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=9D4EDD&center=true&vCenter=true&width=500&lines=Backend+Developer;Estudiante+de+Ingenier%C3%ADa+Inform%C3%A1tica;Especialista+en+Java+y+Spring+Boot)](https://git.io/typing-svg)
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=9D4EDD&center=true&vCenter=true&width=500&lines=Backend+Developer;Project+Manager;Estudiante+de+Ingenier%C3%ADa+Inform%C3%A1tica;Ganador+2x+de+Hackathons)](https://git.io/typing-svg)
   
 </div>
 
@@ -10,17 +10,19 @@
 
 <img align="right" alt="Coding Cat" width="380" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
 
-Soy un desarrollador backend apasionado por Java, con formación técnica en programación y actualmente cursando Ingeniería en Informática. Me especializo en construir sistemas escalables y eficientes que resuelven problemas reales.
+Soy un desarrollador backend y Project Manager apasionado por Java, con formación técnica en programación y actualmente cursando Ingeniería en Informática. Me especializo en construir sistemas escalables y eficientes que resuelven problemas reales.
 
 ```java
 public class JoahanMorales {
     
-    private final String rol = "Backend Developer";
+    private final String rol = "Backend Developer & PM";
     private final String educacion = "Ingeniería en Informática";
+    private final int hackathonsGanados = 2;
     private final List<String> especialidades = Arrays.asList(
         "Desarrollo de APIs REST",
         "Arquitectura de Microservicios",
-        "Optimización de Bases de Datos"
+        "Optimización de Bases de Datos",
+        "Project Management"
     );
     
     public void currentFocus() {
@@ -32,6 +34,8 @@ public class JoahanMorales {
 ```
 
 - Actualmente trabajando con Java y Spring Boot
+- Project Manager con experiencia en gestión de equipos
+- Ganador de 2 Hackathons
 - Aprendiendo arquitecturas de microservicios y cloud computing
 - Interesado en diseño de APIs REST y optimización de bases de datos
 - Estudiante de Ingeniería en Informática
@@ -90,7 +94,13 @@ public class JoahanMorales {
 </div>
 
 <div align="center">
-  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=default" />
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=dracula" />
+  <source media="(prefers-color-scheme: light)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=default" />
+  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=default" alt="GitHub Profile Details" />
+</picture>
+
 </div>
 
 ## Proyectos Destacados
