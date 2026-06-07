@@ -17,7 +17,7 @@ public class JoahanMorales {
     
     private final String rol = "Backend Developer & PM";
     private final String educacion = "Ingeniería en Informática";
-    private final int hackathonsGanados = 3;
+    private final int hackathonsGanados = 4;
     private final List<String> especialidades = Arrays.asList(
         "Desarrollo de APIs REST",
         "Arquitectura de Microservicios",
