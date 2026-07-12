@@ -35,7 +35,7 @@ public class JoahanMorales {
 
 - Actualmente trabajando con Java y Spring Boot
 - Project Manager con experiencia en gestión de equipos
-- Ganador de 2 Hackathons
+- Ganador de 4 Hackathons
 - Aprendiendo arquitecturas de microservicios y cloud computing
 - Interesado en diseño de APIs REST y optimización de bases de datos
 - Estudiante de Ingeniería en Informática
