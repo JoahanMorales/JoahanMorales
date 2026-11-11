@@ -18,8 +18,8 @@
       "award": "1.º lugar",
       "first": true,
       "event": "HackADA",
-      "place": "Puebla",
-      "project": "Mercaditos",
+      "place": "CDMX",
+      "project": "colonIA",
       "url": "https://github.com/rvvictor/HackADA-Upiixia",
       "pitch": "Rutas de compra 100 % local.",
       "kit": true,
@@ -32,7 +32,7 @@
       "first": true,
       "event": "Chilangatón",
       "place": "Mexico Tech Week",
-      "project": "Comercio popular",
+      "project": "colonIA",
       "url": "https://github.com/rvvictor/Chilangaton-Upiixia",
       "pitch": "El mapa del tianguis por día y hora.",
       "kit": true,
@@ -88,16 +88,6 @@
       "motif": "metro"
     }
   ],
-  "next": {
-    "date": "2027",
-    "place": "Tu ciudad",
-    "award": "Próximo",
-    "event": "¿Organizas un hackathon?",
-    "project": "¿El siguiente?",
-    "pitch": "Si organizas uno, escríbeme.",
-    "url": "mailto:joahanmorales07@gmail.com",
-    "motif": "next"
-  },
   "stack": [
     {
       "group": "IA y agentes",
@@ -267,6 +257,132 @@
           "vercel"
         ]
       ]
+    }
+  ],
+  "about": [
+    [
+      [
+        "Full stack en el IPN",
+        "i"
+      ],
+      [
+        "  ·  ",
+        "m"
+      ],
+      [
+        "AI Engineer",
+        "v"
+      ],
+      [
+        "  ·  ",
+        "m"
+      ],
+      [
+        "7",
+        "v"
+      ],
+      [
+        " hackathons ganados",
+        "i"
+      ]
+    ],
+    [
+      [
+        "Hice ",
+        "i"
+      ],
+      [
+        "IPNProfes",
+        "v"
+      ],
+      [
+        " y el ",
+        "i"
+      ],
+      [
+        "UPIIXIA Agentic Kit",
+        "v"
+      ],
+      [
+        ".",
+        "i"
+      ]
+    ],
+    [
+      [
+        "Presidente de ",
+        "i"
+      ],
+      [
+        "UPIIXIA",
+        "v"
+      ],
+      [
+        "  ·  ",
+        "m"
+      ],
+      [
+        "IBM Z Student Ambassador",
+        "i"
+      ]
+    ]
+  ],
+  "experience": [
+    {
+      "role": "Full Stack Software Engineer",
+      "org": "IPN · Centro Nacional de Cálculo",
+      "dates": "2026 — hoy"
+    },
+    {
+      "role": "IBM Z Student Ambassador",
+      "org": "IBM",
+      "dates": "2026 — hoy"
+    },
+    {
+      "role": "Software Developer",
+      "org": "Prestigio en Traslado Automotriz",
+      "dates": "2025 — 2026"
+    }
+  ],
+  "projects": [
+    {
+      "name": "UPIIXIA Agentic Kit",
+      "url": "https://github.com/JoahanMorales/upiixia-agentic-kit",
+      "image": "assets/shots/kit.jpg",
+      "desc": "Varios agentes de IA en un mismo repo, con tareas, pruebas y revisiones.",
+      "repo": "JoahanMorales/upiixia-agentic-kit",
+      "tags": [
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "Gemini"
+      ]
+    },
+    {
+      "name": "IPNProfes",
+      "url": "https://ipnprofes.com",
+      "image": "assets/shots/ipnprofes.jpg",
+      "desc": "Evaluaciones de profesores del IPN. Extensión de Chrome para armar horarios en el SAES.",
+      "site": "ipnprofes.com",
+      "tags": [
+        "React",
+        "Supabase",
+        "Cloudflare"
+      ]
+    }
+  ],
+  "contact": [
+    {
+      "label": "LinkedIn",
+      "value": "joahan-morales",
+      "url": "https://www.linkedin.com/in/joahan-morales/",
+      "icon": "@linkedin"
+    },
+    {
+      "label": "Correo",
+      "value": "joahanmorales07@gmail.com",
+      "url": "mailto:joahanmorales07@gmail.com",
+      "icon": "gmail"
     }
   ]
 }
