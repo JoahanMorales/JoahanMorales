@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=9D4EDD&center=true&vCenter=true&width=500&lines=Backend+Developer;Project+Manager;Estudiante+de+Ingenier%C3%ADa+Inform%C3%A1tica;Ganador+4x+de+Hackathons)](https://git.io/typing-svg)
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=9D4EDD&center=true&vCenter=true&width=500&lines=Backend+Developer;Project+Manager;Estudiante+de+Ingenier%C3%ADa+Inform%C3%A1tica;Ganador+7x+de+Hackathons)](https://git.io/typing-svg)
   
 </div>
 
@@ -17,7 +17,7 @@ public class JoahanMorales {
     
     private final String rol = "Backend Developer & PM";
     private final String educacion = "Ingeniería en Informática";
-    private final int hackathonsGanados = 4;
+    private final int hackathonsGanados = 7;
     private final List<String> especialidades = Arrays.asList(
         "Desarrollo de APIs REST",
         "Arquitectura de Microservicios",
@@ -35,7 +35,7 @@ public class JoahanMorales {
 
 - Actualmente trabajando con Java y Spring Boot
 - Project Manager con experiencia en gestión de equipos
-- Ganador de 4 Hackathons
+- Ganador de 7 Hackathons
 - Aprendiendo arquitecturas de microservicios y cloud computing
 - Interesado en diseño de APIs REST y optimización de bases de datos
 - Estudiante de Ingeniería en Informática
