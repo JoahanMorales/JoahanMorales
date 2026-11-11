@@ -26,7 +26,7 @@ Software Developer · Prestigio en Traslado Automotriz &nbsp;<sub>2025 – 2026<
 <h4>UPIIXIA Agentic Kit</h4>
 Varios agentes de IA en un mismo repo, con tareas, pruebas y revisiones.
 <br><br>
-<sub>Claude Code · Codex · Cursor · Gemini &nbsp;·&nbsp; 3 de los 7 hackathons se ganaron con él</sub>
+<sub>Claude Code · Codex · Cursor · Gemini &nbsp;·&nbsp; 339 pruebas en Linux, macOS y Windows</sub>
 <br><br>
 <a href="https://github.com/JoahanMorales/upiixia-agentic-kit"><img src="https://img.shields.io/github/stars/JoahanMorales/upiixia-agentic-kit?style=flat&label=stars&labelColor=1a1625&color=8b5cf6" alt="stars"></a>
 <a href="https://github.com/JoahanMorales/upiixia-agentic-kit/releases/latest"><img src="https://img.shields.io/github/v/release/JoahanMorales/upiixia-agentic-kit?style=flat&label=release&labelColor=1a1625&color=8b5cf6" alt="release"></a>
@@ -43,17 +43,24 @@ Evaluaciones de profesores del IPN. Extensión de Chrome para armar horarios en 
 </tr>
 </table>
 
-### 7 hackathons ganados
+### Hackathons
 
-| | Hackathon | Proyecto |
-|:--|:--|:--|
-| **1.º** | OpenAI × Kavak | **AXIA** · daños en autos, con IA que aprende de sus errores |
-| **1.º** | Chilangatón 2026 | Mapa del comercio popular por día y hora |
-| **1.º** | HackADA 2026 | Rutas de compra 100 % local |
-| **1.º** | SEDECO × Saptiva AI | **MercurIA** · dónde poner un festival |
-| **1.º** · Track IBM | Talent Land 2026 | **LumivIA** · rutas que cuidan el ambiente |
-| **3.º** · Best Bolt Project | AI Tinkerers × ElevenLabs | **Psyness** · soporte emocional por voz |
-| **Best Open Source** | Mobility & AI Hackathon · ÖBB | **RailSense** · Viena vs CDMX, en trenes |
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hackathons-dark.png">
+  <img alt="7 premios en 12 meses, de noviembre 2025 a noviembre 2026" src="assets/hackathons-light.png" width="100%">
+</picture>
+
+| Fecha | Premio | Hackathon | Proyecto |
+|:--|:--|:--|:--|
+| nov 2026 | **1.º lugar** | OpenAI × Kavak | [AXIA](https://github.com/G10hdz/deus-ex-machina) ◆ · daños en autos, con IA que aprende de sus errores |
+| oct 2026 | **1.º lugar** | HackADA · NVIDIA, Saptiva AI | [Mercaditos](https://github.com/rvvictor/HackADA-Upiixia) ◆ · rutas de compra 100 % local |
+| oct 2026 | **1.º lugar** | Chilangatón · Mexico Tech Week | [Comercio popular](https://github.com/rvvictor/Chilangaton-Upiixia) ◆ · el mapa por día y hora |
+| jun 2026 | **1.º lugar** | SEDECO × Saptiva AI | MercurIA · dónde poner un festival |
+| abr 2026 | **1.º** Track IBM | Talent Land | [LumivIA](https://github.com/FerVarg24/LumivIA) · rutas que cuidan el ambiente |
+| dic 2025 | **3.º** + Best Bolt | ElevenLabs Worldwide Hackathon CDMX | [Psyness](https://github.com/AxolutionsDevs/EvenLabs-Hack) · soporte emocional por voz |
+| nov 2025 | **Best Open Source** | Mobility & AI | [RailSense](https://github.com/AxolutionsDevs/MobilityAI-Hackaton) · Viena vs CDMX, en trenes |
+
+<sub>◆ hecho con UPIIXIA Agentic Kit</sub>
 
 ### Stack
 
