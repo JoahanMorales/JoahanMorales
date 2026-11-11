@@ -1,18 +1,14 @@
 #!/usr/bin/env python3
-"""Build the profile: vector images in assets/gen/ and the generated blocks of README.md, from data/profile.json.
+"""Build the vector parts of the profile (header, hackathon cards, stack) from data/profile.json.
 
-    python3 scripts/build_readme.py          # write assets/gen/*.svg and README.md
+    python3 scripts/build_readme.py          # write assets/gen/*.svg and the marked blocks of README.md
     python3 scripts/build_readme.py --check  # exit 1 if anything is out of date
 
 Every letter is an outlined path (an SVG inside <img> cannot load web fonts on GitHub), so the images are sharp at
 any size and look the same everywhere. Needs: pip install fonttools uharfbuzz. Icons come from Simple Icons (CC0)
 and are cached in assets/icons/. A new hackathon or tool is one entry in data/profile.json.
 """
-import base64
-import datetime
 import io
-import os
-import subprocess
 import json
 import re
 import sys
@@ -286,185 +282,7 @@ def stack(c, data):
                                           for g in data["stack"]), b)
 
 
-# ---------------------------------------------------------------- live numbers (GitHub API)
-def gh_token():
-    tok = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
-    if tok:
-        return tok
-    try:
-        return subprocess.run(["gh", "auth", "token"], capture_output=True, text=True, timeout=20).stdout.strip() or None
-    except (OSError, subprocess.SubprocessError):
-        return None
-
-
-def gh_api(path, query=None):
-    tok = gh_token()
-    headers = {"User-Agent": "profile-readme-build", "Accept": "application/vnd.github+json"}
-    if tok:
-        headers["Authorization"] = "Bearer " + tok
-    if query:
-        req = urllib.request.Request("https://api.github.com/graphql", data=json.dumps({"query": query}).encode(),
-                                     headers=headers, method="POST")
-    else:
-        req = urllib.request.Request("https://api.github.com/" + path, headers=headers)
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.loads(r.read())
-
-
-def live(data):
-    """Stars, release and the contribution calendar; None where the API is not reachable (the old image stays)."""
-    out = {"repos": {}, "calendar": None}
-    for p in data["projects"]:
-        if p.get("repo"):
-            try:
-                stars = gh_api("repos/" + p["repo"])["stargazers_count"]
-                rel = gh_api("repos/%s/releases/latest" % p["repo"]).get("tag_name", "")
-                out["repos"][p["repo"]] = (stars, rel)
-            except Exception:  # noqa: BLE001
-                pass
-    try:
-        q = ('query{user(login:"%s"){contributionsCollection{contributionCalendar{totalContributions '
-             'weeks{contributionDays{date contributionCount}}}}}}' % data.get("user", "JoahanMorales"))
-        out["calendar"] = gh_api("", q)["data"]["user"]["contributionsCollection"]["contributionCalendar"]
-    except Exception:  # noqa: BLE001
-        pass
-    return out
-
-
-# ---------------------------------------------------------------- about, sections, projects, activity, contact
-COLORS = {"i": "ink", "v": "violet", "m": "muted"}
-
-
-def about(c, data):
-    W, H = 640, 270
-    b, y = [], 30
-    for line in data["about"]:
-        x = 0
-        for text, style in line:
-            d, w = text_path(text, SANS, 500 if style != "m" else 400, 18, x, y, -0.01)
-            b.append('<path d="%s" fill="%s"/>' % (d, c[COLORS[style]]))
-            x += w + 18 * -0.01
-        y += 32
-    y += 14
-    b.append(t("EXPERIENCIA", MONO, 500, 10.5, 0, y, c["muted"], 0.16))
-    y += 12
-    for e in data["experience"]:
-        b.append('<path d="M0 %.1f L%d %.1f" stroke="%s" stroke-width="1"/>' % (y, W - 8, y, c["line"]))
-        y += 26
-        d, w = text_path(e["role"], SANS, 700, 14.5, 0, y, -0.01)
-        b.append('<path d="%s" fill="%s"/>' % (d, c["ink"]))
-        b.append(t(e["org"], SANS, 400, 13, w + 10, y, c["muted"]))
-        b.append(t(e["dates"].upper(), MONO, 500, 10, W - 8, y, c["violet"], 0.08, "end"))
-        y += 14
-    return svg(W, H, "Sobre mí. " + " ".join("".join(x for x, _ in l) for l in data["about"]), b)
-
-
-def section(c, num, title):
-    W, H = 900, 46
-    b = [t("%02d" % num, MONO, 500, 11, 0, 30, c["violet"], 0.1)]
-    d, w = text_path(title, SANS, 700, 24, 30, 31, -0.02)
-    b.append('<path d="%s" fill="%s"/>' % (d, c["ink"]))
-    b.append('<path d="M%.1f 23 L%d 23" stroke="%s" stroke-width="1"/>' % (30 + w + 16, W, c["line"]))
-    return svg(W, H, title, b)
-
-
-def project(c, p, live_repo):
-    W, H = 440, 360
-    img = (ROOT / p["image"]).read_bytes()
-    uri = "data:image/jpeg;base64," + base64.b64encode(img).decode()
-    b = ['<clipPath id="s"><rect x="14" y="14" width="%d" height="206" rx="10"/></clipPath>' % (W - 28),
-         '<rect x="1" y="1" width="%d" height="%d" rx="16" fill="%s" stroke="%s"/>' % (W - 2, H - 2, c["card"], c["line"]),
-         '<image href="%s" x="14" y="14" width="%d" height="206" preserveAspectRatio="xMidYMin slice" clip-path="url(#s)"/>'
-         % (uri, W - 28)]
-    b.append(t(p["name"], SANS, 700, 22, 18, 254, c["ink"], -0.02))
-    y = 278
-    for line in wrap(p["desc"], SANS, 400, 13, W - 36)[:2]:
-        b.append(t(line, SANS, 400, 13, 18, y, c["muted"]))
-        y += 18
-    meta = []
-    if live_repo:
-        stars, rel = live_repo
-        meta = ["%d stars" % stars] + ([rel] if rel else [])
-    elif p.get("site"):
-        meta = [p["site"]]
-    x = 18
-    for i, m in enumerate(meta + p["tags"]):
-        col = c["violet"] if i < len(meta) else c["muted"]
-        d, w = text_path(m.upper(), MONO, 500, 9.5, x, H - 22, 0.1)
-        b.append('<path d="%s" fill="%s"/>' % (d, col))
-        x += w + 14
-    b.append('<path d="M18 %d L%d %d" stroke="%s" stroke-width="1"/>' % (H - 42, W - 18, H - 42, c["line"]))
-    return svg(W, H, "%s: %s" % (p["name"], p["desc"]), b)
-
-
-def activity(c, cal):
-    W = 900
-    days = [d for w in cal["weeks"] for d in w["contributionDays"]]
-    counts = [d["contributionCount"] for d in days]
-    today = days[-1]["date"]
-    cur = 0
-    for n in reversed(counts[:-1] if counts[-1] == 0 else counts):
-        if n == 0:
-            break
-        cur += 1
-    best = run_ = 0
-    for n in counts:
-        run_ = run_ + 1 if n else 0
-        best = max(best, run_)
-    active = sum(1 for n in counts if n)
-    stats = [("%s" % format(cal["totalContributions"], ",").replace(",", "."), "contribuciones en el último año"),
-             ("%d" % cur, "días de racha actual"), ("%d" % best, "días, la racha más larga"), ("%d" % active, "días con commits")]
-    b = []
-    col_w = W / 4
-    for i, (big, lab) in enumerate(stats):
-        x = i * col_w
-        b.append(t(big, SANS, 700, 34, x, 40, c["violet"] if i == 0 else c["ink"], -0.03))
-        b.append(t(lab, SANS, 400, 12.5, x, 62, c["muted"]))
-    cell, gap, top = 13, 4, 104
-    weeks = cal["weeks"]
-    peak = max(counts) or 1
-    def level(n):
-        if n == 0:
-            return None
-        r = n / peak
-        return 3 if r > .5 else 2 if r > .25 else 1 if r > .08 else 0
-    ops = [".35", ".55", ".78", "1"]
-    last_m = None
-    for wi, w in enumerate(weeks):
-        x = wi * (cell + gap)
-        first = w["contributionDays"][0]["date"]
-        m = int(first[5:7])
-        if m != last_m and wi < len(weeks) - 2:
-            names = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
-            b.append(t(names[m - 1], MONO, 400, 9.5, x, top - 10, c["muted"]))
-            last_m = m
-        for d in w["contributionDays"]:
-            r = datetime.date.fromisoformat(d["date"]).isoweekday() % 7
-            lv = level(d["contributionCount"])
-            if lv is None:
-                b.append('<rect x="%d" y="%d" width="%d" height="%d" rx="3" fill="%s" fill-opacity="%s"/>' % (
-                    x, top + r * (cell + gap), cell, cell, c["tint"], c["levels"][4]))
-            else:
-                b.append('<rect x="%d" y="%d" width="%d" height="%d" rx="3" fill="%s" fill-opacity="%s"/>' % (
-                    x, top + r * (cell + gap), cell, cell, c["deep"], ops[lv]))
-    H = top + 7 * (cell + gap) + 4
-    return svg(W, H, "Actividad: %d contribuciones en el último año, racha actual de %d días, la más larga de %d días (hasta %s)"
-               % (cal["totalContributions"], cur, best, today), b)
-
-
-def button(c, ct):
-    lab_w = measure(ct["label"].upper(), MONO, 500, 10, 0.12)
-    val_w = measure(ct["value"], SANS, 500, 14)
-    W, H = int(16 + 20 + 12 + lab_w + 12 + val_w + 30), 44
-    b = ['<rect x="1" y="1" width="%d" height="%d" rx="22" fill="%s" stroke="%s"/>' % (W - 2, H - 2, c["card"], c["line"])]
-    b.append(icon(ct["icon"], 16, 12, 20, c["violet"]))
-    b.append(t(ct["label"].upper(), MONO, 500, 10, 48, 26, c["muted"], 0.12))
-    b.append(t(ct["value"], SANS, 500, 14, 48 + lab_w + 12, 27, c["ink"]))
-    b.append(t("↗", SANS, 500, 13, W - 16, 27, c["violet"], anchor="end"))
-    return svg(W, H, "%s: %s" % (ct["label"], ct["value"]), b)
-
-
-# ---------------------------------------------------------------- the README
+# ---------------------------------------------------------------- the generated blocks of README.md
 def picture(name, alt, width, href=None):
     pic = ('<picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/%s-dark.svg">'
            '<img src="assets/gen/%s-light.svg" width="%s" alt="%s"></picture>'
@@ -482,68 +300,48 @@ def hk_name(h):
     return "hk-" + slug(h["project"] + "-" + h["event"])
 
 
-SECTIONS = ["Proyectos", "Hackathons", "Stack", "Actividad", "Contacto"]
-
-
-def render(data, lv):
+def render(data):
     files = {}
     hk = len(data["hackathons"])
     for theme, c in THEMES.items():
         files["header-%s.svg" % theme] = header(c, hk)
-        files["about-%s.svg" % theme] = about(c, data)
         files["stack-%s.svg" % theme] = stack(c, data)
-        for i, name in enumerate(SECTIONS, 1):
-            files["sec-%s-%s.svg" % (slug(name), theme)] = section(c, i, name)
         for h in data["hackathons"]:
             files["%s-%s.svg" % (hk_name(h), theme)] = card(c, h)
-        for p in data["projects"]:
-            files["pr-%s-%s.svg" % (slug(p["name"]), theme)] = project(c, p, lv["repos"].get(p.get("repo")))
-        if lv["calendar"]:
-            files["activity-%s.svg" % theme] = activity(c, lv["calendar"])
-        for ct in data["contact"]:
-            files["ct-%s-%s.svg" % (slug(ct["label"]), theme)] = button(c, ct)
-    sec = lambda n: picture("sec-" + slug(n), n, "100%")
     cards = [picture(hk_name(h), "%s · %s · %s" % (h["award"], h["event"], h["project"]), "24%", h.get("url") or None)
              for h in data["hackathons"]]
     rows = ["\n".join(cards[i:i + 4]) for i in range(0, len(cards), 4)]
-    projects = "\n".join(picture("pr-" + slug(p["name"]), p["name"], "49%", p["url"]) for p in data["projects"])
-    contact = "\n".join(picture("ct-" + slug(ct["label"]), "%s: %s" % (ct["label"], ct["value"]), None, ct["url"])
-                        .replace(' width="None"', "") for ct in data["contact"])
-    readme = "\n\n".join([
-        "<!-- Generated by scripts/build_readme.py from data/profile.json. Edit those, not this file. -->",
-        picture("header", "Joahan Morales · AI Engineer, Full Stack, Backend", "100%"),
-        '<p>\n%s\n<img src="%s" width="29%%" alt="Coding cat">\n</p>'
-        % (picture("about", "Sobre mí", "69%"), data.get("cat", "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")),
-        sec("Proyectos"), '<p align="center">\n%s\n</p>' % projects,
-        sec("Hackathons"), '<p align="center">\n%s\n</p>' % "\n<br>\n".join(rows),
-        sec("Stack"), picture("stack", "Stack", "100%"),
-        sec("Actividad"), picture("activity", "Actividad en GitHub", "100%"),
-        sec("Contacto"), "<p>\n%s\n</p>" % contact,
-        '<p align="right"><img src="https://komarev.com/ghpvc/?username=JoahanMorales&label=visitas&color=8b5cf6&style=flat" alt="visitas"></p>',
-    ]) + "\n"
-    return files, readme
+    blocks = {"header": picture("header", "Joahan Morales · AI Engineer, Full Stack, Backend", "100%"),
+              "hackathons": '<p align="center">\n%s\n</p>' % "\n<br>\n".join(rows),
+              "stack": picture("stack", "Stack", "100%")}
+    return files, blocks
 
 
 def main():
     data = json.loads((ROOT / "data" / "profile.json").read_text(encoding="utf-8"))
-    lv = live(data)
-    files, readme = render(data, lv)
+    files, blocks = render(data)
+    readme = ROOT / "README.md"
+    text = readme.read_text(encoding="utf-8")
+    new = text
+    for name, block in blocks.items():
+        pat = re.compile(r"<!-- %s:start -->.*?<!-- %s:end -->" % (name, name), re.S)
+        if not pat.search(new):
+            sys.exit("README.md has no %s markers" % name)
+        new = pat.sub(lambda _: "<!-- %s:start -->\n%s\n<!-- %s:end -->" % (name, block, name), new)
     GEN.mkdir(parents=True, exist_ok=True)
-    keep = {"activity-dark.svg", "activity-light.svg"} if not lv["calendar"] else set()
     stale = [f for f, body in files.items() if not (GEN / f).exists() or (GEN / f).read_text(encoding="utf-8") != body]
-    orphans = [p.name for p in GEN.glob("*.svg") if p.name not in files and p.name not in keep]
-    old = (ROOT / "README.md").read_text(encoding="utf-8")
+    orphans = [p.name for p in GEN.glob("*.svg") if p.name not in files]
     if "--check" in sys.argv:
-        if stale or orphans or readme != old:
-            sys.exit("out of date: %s" % ", ".join(stale + orphans + (["README.md"] if readme != old else [])))
+        if stale or orphans or new != text:
+            sys.exit("out of date: %s" % ", ".join(stale + orphans + (["README.md"] if new != text else [])))
         return
     for f in stale:
         (GEN / f).write_text(files[f], encoding="utf-8")
     for f in orphans:
         (GEN / f).unlink()
-    if readme != old:
-        (ROOT / "README.md").write_text(readme, encoding="utf-8")
-    print("wrote %d image(s), removed %d, README %s" % (len(stale), len(orphans), "updated" if readme != old else "unchanged"))
+    if new != text:
+        readme.write_text(new, encoding="utf-8")
+    print("wrote %d image(s), removed %d, README %s" % (len(stale), len(orphans), "updated" if new != text else "unchanged"))
 
 
 if __name__ == "__main__":
