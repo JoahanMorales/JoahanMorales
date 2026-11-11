@@ -3,13 +3,17 @@
   <img alt="Joahan Morales · AI Engineer, Full Stack, Backend · 7× hackathon winner" src="assets/header-light.png" width="100%">
 </picture>
 
-<img align="right" width="300" alt="Coding cat" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
+<img align="right" width="260" alt="Coding cat" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
 
-Desarrollo backends, agentes de IA y automatización que siguen funcionando después de la demo.
+Full stack en el IPN · AI Engineer · 7 hackathons ganados.<br>
+Hice IPNProfes y el UPIIXIA Agentic Kit.<br>
+Presidente de UPIIXIA · IBM Z Student Ambassador.
 
-En el **IPN** mantengo sistemas y APIs institucionales con Java, ColdFusion y Oracle. Fuera de ahí construyo herramientas para que varios agentes de IA trabajen en equipo sin pisarse, y compito en hackathons con mi equipo.
+**Experiencia**
 
-Presido **UPIIXIA**, el club de IA de UPIICSA, y soy **IBM Z Student Ambassador**.
+Full Stack Software Engineer · IPN, Centro Nacional de Cálculo &nbsp;<sub>2026 – hoy</sub><br>
+IBM Z Student Ambassador · IBM &nbsp;<sub>2026 – hoy</sub><br>
+Software Developer · Prestigio en Traslado Automotriz &nbsp;<sub>2025 – 2026</sub>
 
 <br clear="right">
 
@@ -20,9 +24,9 @@ Presido **UPIIXIA**, el club de IA de UPIICSA, y soy **IBM Z Student Ambassador*
 <td width="50%" valign="top">
 <a href="https://github.com/JoahanMorales/upiixia-agentic-kit"><img src="assets/card-kit.png" alt="UPIIXIA Agentic Kit" width="100%"></a>
 <h4>UPIIXIA Agentic Kit</h4>
-Varios agentes de IA en el mismo repo: cada uno toma una tarea, escribe la prueba primero, otro agente lo revisa y nadie pisa el trabajo de otro. Funciona en Claude Code, Codex, Cursor y Gemini CLI.
+Varios agentes de IA en un mismo repo, con tareas, pruebas y revisiones.
 <br><br>
-<sub>Bash · Python · Git &nbsp;·&nbsp; con él ganamos 3 de los hackathons de abajo</sub>
+<sub>Claude Code · Codex · Cursor · Gemini &nbsp;·&nbsp; 3 de los 7 hackathons se ganaron con él</sub>
 <br><br>
 <a href="https://github.com/JoahanMorales/upiixia-agentic-kit"><img src="https://img.shields.io/github/stars/JoahanMorales/upiixia-agentic-kit?style=flat&label=stars&labelColor=1a1625&color=8b5cf6" alt="stars"></a>
 <a href="https://github.com/JoahanMorales/upiixia-agentic-kit/releases/latest"><img src="https://img.shields.io/github/v/release/JoahanMorales/upiixia-agentic-kit?style=flat&label=release&labelColor=1a1625&color=8b5cf6" alt="release"></a>
@@ -30,9 +34,9 @@ Varios agentes de IA en el mismo repo: cada uno toma una tarea, escribe la prueb
 <td width="50%" valign="top">
 <a href="https://ipnprofes.com"><img src="assets/card-ipnprofes.png" alt="IPNProfes" width="100%"></a>
 <h4>IPNProfes</h4>
-Evaluaciones de profesores del IPN con acceso seudónimo, hechas por estudiantes. Incluye una extensión de Chrome que arma horarios sin traslapes y muestra la calificación de cada profe dentro del SAES.
+Evaluaciones de profesores del IPN. Extensión de Chrome para armar horarios en el SAES.
 <br><br>
-<sub>React · Supabase · Cloudflare &nbsp;·&nbsp; proyecto estudiantil independiente</sub>
+<sub>React · Supabase · Cloudflare</sub>
 <br><br>
 <a href="https://ipnprofes.com"><img src="https://img.shields.io/badge/ipnprofes.com-visitar-8b5cf6?style=flat&labelColor=1a1625" alt="ipnprofes.com"></a>
 </td>
@@ -43,22 +47,13 @@ Evaluaciones de profesores del IPN con acceso seudónimo, hechas por estudiantes
 
 | | Hackathon | Proyecto |
 |:--|:--|:--|
-| **1.º** | OpenAI × Kavak · CDMX | **AXIA**: detecta daños en autos, estima la reparación y aprende de lo que se le escapa |
-| **1.º** | Chilangatón 2026 · SEDECO, Mexico Tech Week | Mapa vivo del comercio popular por día y hora |
-| **1.º** | HackADA 2026 · SECIHTI Puebla, NVIDIA, Saptiva AI | Rutas de compra 100 % local para los mercaditos |
-| **1.º** | Hackathon SEDECO × Saptiva AI | **MercurIA**: dónde poner un festival para que la derrama llegue a las MiPyMEs |
-| **1.º** · Track IBM | Talent Land 2026 | **LumivIA**: rutas que cuidan el ambiente, con IBM watsonx |
-| **3.º** · Best Bolt Project | AI Tinkerers × ElevenLabs · CDMX | **Psyness**: agente de soporte emocional con voz en tiempo real |
-| **Best Open Source** | Mobility & AI Hackathon · ÖBB | **RailSense**: la satisfacción del pasajero, Viena contra CDMX |
-
-### Experiencia
-
-- **Full Stack Software Engineer** · IPN, Centro Nacional de Cálculo &nbsp;<sub>2026 – hoy</sub><br>
-  Sistemas y APIs internos del IPN con Java, ColdFusion, Oracle y JavaScript; automatización de procesos administrativos.
-- **IBM Z Student Ambassador** · IBM &nbsp;<sub>2026 – hoy</sub><br>
-  Mainframe de IBM y Python.
-- **Software Developer & Process Automation Analyst** · Prestigio en Traslado Automotriz &nbsp;<sub>2025 – 2026</sub><br>
-  Una extensión de navegador que llena los formularios del SAT redujo 50 % el tiempo de captura.
+| **1.º** | OpenAI × Kavak | **AXIA** · daños en autos, con IA que aprende de sus errores |
+| **1.º** | Chilangatón 2026 | Mapa del comercio popular por día y hora |
+| **1.º** | HackADA 2026 | Rutas de compra 100 % local |
+| **1.º** | SEDECO × Saptiva AI | **MercurIA** · dónde poner un festival |
+| **1.º** · Track IBM | Talent Land 2026 | **LumivIA** · rutas que cuidan el ambiente |
+| **3.º** · Best Bolt Project | AI Tinkerers × ElevenLabs | **Psyness** · soporte emocional por voz |
+| **Best Open Source** | Mobility & AI Hackathon · ÖBB | **RailSense** · Viena vs CDMX, en trenes |
 
 ### Stack
 
