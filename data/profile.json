@@ -1,0 +1,44 @@
+{
+  "hackathons": [
+    {"date": "nov 2026", "award": "1.º lugar", "first": true, "event": "OpenAI × Kavak", "place": "CDMX",
+     "project": "AXIA", "url": "https://github.com/G10hdz/deus-ex-machina",
+     "pitch": "Daños en autos, con una IA que aprende de sus errores.", "kit": true},
+    {"date": "oct 2026", "award": "1.º lugar", "first": true, "event": "HackADA", "place": "Puebla",
+     "project": "Mercaditos", "url": "https://github.com/rvvictor/HackADA-Upiixia",
+     "pitch": "Rutas de compra 100 % local.", "kit": true},
+    {"date": "oct 2026", "award": "1.º lugar", "first": true, "event": "Chilangatón", "place": "Mexico Tech Week",
+     "project": "Comercio popular", "url": "https://github.com/rvvictor/Chilangaton-Upiixia",
+     "pitch": "El mapa del tianguis por día y hora.", "kit": true},
+    {"date": "jun 2026", "award": "1.º lugar", "first": true, "event": "SEDECO × Saptiva AI", "place": "CDMX",
+     "project": "MercurIA", "url": "",
+     "pitch": "Dónde poner un festival para que gane el barrio."},
+    {"date": "abr 2026", "award": "1.º Track IBM", "first": true, "event": "Talent Land", "place": "México",
+     "project": "LumivIA", "url": "https://github.com/FerVarg24/LumivIA",
+     "pitch": "Rutas que cuidan el aire, con IBM watsonx."},
+    {"date": "dic 2025", "award": "3.º + Best Bolt", "first": false, "event": "ElevenLabs Hackathon", "place": "CDMX",
+     "project": "Psyness", "url": "https://github.com/AxolutionsDevs/EvenLabs-Hack",
+     "pitch": "Soporte emocional con voz en tiempo real."},
+    {"date": "nov 2025", "award": "Best Open Source", "first": false, "event": "Mobility & AI", "place": "Reto ÖBB",
+     "project": "RailSense", "url": "https://github.com/AxolutionsDevs/MobilityAI-Hackaton",
+     "pitch": "Viena contra CDMX, en trenes."}
+  ],
+  "next": {"title": "¿El siguiente?", "text": "Si organizas uno, escríbeme.", "url": "mailto:joahanmorales07@gmail.com"},
+  "stack": [
+    {"group": "IA y agentes", "items": [
+      ["Claude Code", "claude"], ["Codex", "@codex"], ["Cursor", "cursor"], ["Gemini CLI", "googlegemini"],
+      ["OpenAI API", "@openai"], ["ElevenLabs", "elevenlabs"], ["watsonx", "@watsonx"], ["MCP", "modelcontextprotocol"],
+      ["Ollama", "ollama"], ["NVIDIA", "nvidia"]]},
+    {"group": "Backend", "items": [
+      ["Java", "openjdk"], ["Spring Boot", "springboot"], ["Python", "python"], ["Node.js", "nodedotjs"],
+      ["ColdFusion", "@coldfusion"], ["Bash", "gnubash"]]},
+    {"group": "Frontend", "items": [
+      ["React", "react"], ["TypeScript", "typescript"], ["JavaScript", "javascript"], ["Vite", "vite"],
+      ["Tailwind", "tailwindcss"], ["jQuery", "jquery"]]},
+    {"group": "Datos", "items": [
+      ["PostgreSQL", "postgresql"], ["Oracle", "@oracle"], ["MySQL", "mysql"], ["MongoDB", "mongodb"],
+      ["Redis", "redis"], ["Supabase", "supabase"]]},
+    {"group": "Infra", "items": [
+      ["Docker", "docker"], ["Linux", "linux"], ["Git", "git"], ["GitHub Actions", "githubactions"],
+      ["Cloudflare", "cloudflare"], ["Vercel", "vercel"]]}
+  ]
+}

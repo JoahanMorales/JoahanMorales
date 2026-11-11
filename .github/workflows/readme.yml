@@ -1,0 +1,21 @@
+# Edit data/profile.json (a new hackathon, a new tool) and the README rebuilds itself.
+name: readme
+on:
+  push:
+    branches: [main]
+    paths: [data/**, scripts/**]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/build_readme.py
+      - run: |
+          git diff --quiet README.md && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "README: rebuilt from data/profile.json"
+          git push
