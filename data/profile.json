@@ -10,7 +10,8 @@
       "url": "https://github.com/G10hdz/deus-ex-machina",
       "pitch": "Daños en autos, con una IA que aprende de sus errores.",
       "kit": true,
-      "big": "1º"
+      "big": "1º",
+      "motif": "car"
     },
     {
       "date": "oct 2026",
@@ -22,7 +23,8 @@
       "url": "https://github.com/rvvictor/HackADA-Upiixia",
       "pitch": "Rutas de compra 100 % local.",
       "kit": true,
-      "big": "1º"
+      "big": "1º",
+      "motif": "route"
     },
     {
       "date": "oct 2026",
@@ -34,7 +36,8 @@
       "url": "https://github.com/rvvictor/Chilangaton-Upiixia",
       "pitch": "El mapa del tianguis por día y hora.",
       "kit": true,
-      "big": "1º"
+      "big": "1º",
+      "motif": "awning"
     },
     {
       "date": "jun 2026",
@@ -45,7 +48,8 @@
       "project": "MercurIA",
       "url": "",
       "pitch": "Dónde poner un festival para que gane el barrio.",
-      "big": "1º"
+      "big": "1º",
+      "motif": "voronoi"
     },
     {
       "date": "abr 2026",
@@ -56,7 +60,8 @@
       "project": "LumivIA",
       "url": "https://github.com/FerVarg24/LumivIA",
       "pitch": "Rutas que cuidan el aire, con IBM watsonx.",
-      "big": "1º"
+      "big": "1º",
+      "motif": "leaf"
     },
     {
       "date": "dic 2025",
@@ -67,7 +72,8 @@
       "project": "Psyness",
       "url": "https://github.com/AxolutionsDevs/EvenLabs-Hack",
       "pitch": "Soporte emocional con voz en tiempo real.",
-      "big": "3º"
+      "big": "3º",
+      "motif": "wave"
     },
     {
       "date": "nov 2025",
@@ -78,7 +84,8 @@
       "project": "RailSense",
       "url": "https://github.com/AxolutionsDevs/MobilityAI-Hackaton",
       "pitch": "Viena contra CDMX, en trenes.",
-      "big": "OSS"
+      "big": "OSS",
+      "motif": "metro"
     }
   ],
   "next": {
@@ -88,7 +95,8 @@
     "event": "¿Organizas un hackathon?",
     "project": "¿El siguiente?",
     "pitch": "Si organizas uno, escríbeme.",
-    "url": "mailto:joahanmorales07@gmail.com"
+    "url": "mailto:joahanmorales07@gmail.com",
+    "motif": "next"
   },
   "stack": [
     {

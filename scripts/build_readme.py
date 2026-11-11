@@ -139,7 +139,7 @@ def header(c, hk):
     return svg(W, H, "Joahan Morales · AI Engineer, Full Stack, Backend · %d× hackathon winner" % hk, b)
 
 
-# ---------------------------------------------------------------- hackathon cards (a scoreboard)
+# ---------------------------------------------------------------- hackathon cards: one drawing per project
 def wrap(text, font, wght, size, width):
     lines, cur = [], ""
     for word in text.split():
@@ -152,55 +152,132 @@ def wrap(text, font, wght, size, width):
     return lines + ([cur] if cur else [])
 
 
+def motif(kind, c):
+    """Line art in a 214x112 box, in the theme's violet."""
+    v, d, tint = c["violet"], c["deep"], c["tint"]
+    st = 'fill="none" stroke="%s" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"' % v
+    if kind == "car":  # a car under a detection box
+        return ('<path %s d="M44 82 L56 62 Q61 55 72 55 L124 55 Q136 55 144 62 L160 76 L172 78 Q180 80 180 88 L180 90 '
+                'L44 90 Z"/><path %s d="M70 62 L82 62 L82 74 L60 74 Z M92 62 L124 62 Q130 62 134 66 L141 74 L92 74 Z"/>'
+                '<circle cx="76" cy="91" r="10" fill="%s" stroke="%s" stroke-width="2"/><circle cx="150" cy="91" r="10" fill="%s" stroke="%s" stroke-width="2"/>'
+                '<rect x="134" y="66" width="44" height="40" rx="3" fill="none" stroke="%s" stroke-width="1.6" '
+                'stroke-dasharray="4 4"/><circle cx="178" cy="66" r="4" fill="%s"/>'
+                % (st, st, c["card"], v, c["card"], v, d, d))
+    if kind == "route":  # a dotted route between neighbourhood shops
+        pins = "".join('<circle cx="%d" cy="%d" r="%d" fill="%s"/>' % (x, y, r, col)
+                       for x, y, r, col in ((32, 84, 6, d), (96, 52, 5, v), (138, 76, 5, v), (184, 34, 7, d)))
+        shops = "".join('<rect x="%d" y="%d" width="9" height="9" rx="2" fill="%s" fill-opacity=".35"/>' % (x, y, tint)
+                        for x, y in ((58, 30), (112, 92), (160, 54), (70, 94), (186, 82)))
+        return ('<path d="M32 84 C56 40 80 46 96 52 S126 86 138 76 S170 30 184 34" fill="none" stroke="%s" '
+                'stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 7"/>%s%s' % (v, shops, pins))
+    if kind == "awning":  # a tianguis awning
+        bands = "".join('<rect x="%d" y="26" width="17" height="30" fill="%s"%s/>' % (
+            34 + i * 17, d if i % 2 == 0 else tint, "" if i % 2 == 0 else ' fill-opacity=".25"') for i in range(9))
+        scal = "".join('<path d="M%d 56 a8.5 8.5 0 0 0 17 0" fill="%s"%s/>' % (
+            34 + i * 17, d if i % 2 == 0 else tint, "" if i % 2 == 0 else ' fill-opacity=".25"') for i in range(9))
+        return ('<rect x="30" y="20" width="161" height="8" rx="4" fill="%s"/>%s%s'
+                '<path %s d="M38 64 L38 100 M183 64 L183 100 M28 100 L194 100"/>'
+                '<rect x="62" y="80" width="22" height="14" rx="3" fill="%s" fill-opacity=".35"/>'
+                '<rect x="96" y="76" width="30" height="18" rx="3" fill="%s" fill-opacity=".55"/>'
+                '<rect x="138" y="82" width="18" height="12" rx="3" fill="%s" fill-opacity=".35"/>'
+                % (v, bands, scal, st, tint, tint, tint))
+    if kind == "voronoi":  # zones of the city, one picked
+        cells = [("M20 18 L82 18 L72 58 L20 70 Z", ".10"), ("M82 18 L150 18 L132 50 L72 58 Z", ".22"),
+                 ("M150 18 L196 18 L196 62 L132 50 Z", ".14"), ("M20 70 L72 58 L88 100 L20 100 Z", ".18"),
+                 ("M72 58 L132 50 L146 92 L88 100 Z", "1"), ("M132 50 L196 62 L196 100 L146 92 Z", ".08"),
+                 ("M146 92 L196 100 L146 100 Z", ".2")]
+        out = "".join('<path d="%s" fill="%s" fill-opacity="%s" stroke="%s" stroke-width="1.6" stroke-linejoin="round"/>'
+                      % (p, d if op == "1" else tint, op, c["card"]) for p, op in cells)
+        return out + '<circle cx="110" cy="76" r="5" fill="%s"/><path %s d="M110 60 L110 50 M98 64 L91 57 M122 64 L129 57"/>' % (
+            c["card"], 'fill="none" stroke="%s" stroke-width="2" stroke-linecap="round"' % c["card"])
+    if kind == "leaf":  # a route that bends for cleaner air
+        return ('<path d="M24 92 C70 92 76 40 120 44 S170 86 194 40" fill="none" stroke="%s" stroke-width="2.4" '
+                'stroke-linecap="round"/><circle cx="24" cy="92" r="5" fill="%s"/><circle cx="194" cy="40" r="6" fill="%s"/>'
+                '<path d="M150 22 C176 18 188 30 186 48 C164 52 148 42 150 22 Z" fill="%s" fill-opacity=".85"/>'
+                '<path d="M154 26 L180 44" stroke="%s" stroke-width="1.6" stroke-linecap="round"/>'
+                '<g fill="%s" fill-opacity=".25"><circle cx="58" cy="40" r="10"/><circle cx="72" cy="34" r="13"/>'
+                '<circle cx="88" cy="40" r="9"/></g>' % (v, d, d, d, c["card"], tint))
+    if kind == "wave":  # a voice
+        hs = [6, 10, 16, 26, 38, 30, 20, 44, 58, 46, 32, 52, 64, 50, 36, 24, 40, 30, 18, 26, 14, 8, 12, 6]
+        return "".join('<rect x="%d" y="%.1f" width="5" height="%d" rx="2.5" fill="%s"%s/>' % (
+            25 + i * 7, 57 - h / 2, h, d if 7 <= i <= 13 else v, "" if 7 <= i <= 13 else ' fill-opacity=".55"')
+            for i, h in enumerate(hs))
+    if kind == "metro":  # two lines, two cities
+        a = '<path d="M20 38 L96 38 L132 74 L196 74" fill="none" stroke="%s" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>' % d
+        b2 = '<path d="M44 100 L44 70 L84 30 L196 30" fill="none" stroke="%s" stroke-width="5" stroke-opacity=".5" stroke-linecap="round" stroke-linejoin="round"/>' % v
+        st_ = "".join('<circle cx="%d" cy="%d" r="5" fill="%s" stroke="%s" stroke-width="2.4"/>' % (x, y, c["card"], col)
+                      for x, y, col in ((20, 38, d), (66, 38, d), (114, 56, d), (164, 74, d), (196, 74, d),
+                                        (44, 100, v), (64, 50, v), (140, 30, v), (196, 30, v)))
+        return a + b2 + st_
+    # next: an open seat
+    return ('<circle cx="107" cy="58" r="34" fill="none" stroke="%s" stroke-width="2" stroke-dasharray="5 6"/>%s'
+            % (c["muted"], t("?", SANS, 700, 44, 107, 74, c["muted"], anchor="middle")))
+
+
 def card(c, h, nxt=False):
-    W, H = 440, 236
-    b = ['<clipPath id="k"><rect x="1" y="1" width="%d" height="%d" rx="18"/></clipPath>' % (W - 2, H - 2),
-         '<rect x="1" y="1" width="%d" height="%d" rx="18" fill="%s" stroke="%s"%s/>' % (
-             W - 2, H - 2, c["card"], c["line"], ' stroke-dasharray="6 6"' if nxt else "")]
+    W, H = 214, 270
+    b = ['<clipPath id="k"><rect x="1" y="1" width="%d" height="%d" rx="16"/></clipPath>' % (W - 2, H - 2),
+         '<rect x="1" y="1" width="%d" height="%d" rx="16" fill="%s" stroke="%s"%s/>' % (
+             W - 2, H - 2, c["card"], c["line"], ' stroke-dasharray="5 5"' if nxt else ""),
+         '<g clip-path="url(#k)"><rect x="0" y="0" width="%d" height="118" fill="%s" fill-opacity="%s"/></g>' % (
+             W, c["tint"], c["levels"][4])]
+    b.append(motif(h.get("motif", "next"), c))
+    # the medal
     big = h.get("big", "?")
-    fill, op = (c["deep"], ".9") if h.get("first") else (c["violet"], ".5")
-    if nxt:
-        fill, op = c["muted"], ".3"
-    size = 172 if len(big) <= 2 else 112
-    b.append('<g clip-path="url(#k)">%s</g>' % t(big, SANS, 700, size, W + 16, 212, fill, -0.06, "end", op))
-    b.append(t((h["date"] + "  ·  " + h["place"]).upper(), MONO, 500, 10.5, 26, 40, c["muted"], 0.12))
-    b.append(t(h["award"], MONO, 500, 12, 26, 70, c["violet"], 0.02))
-    b.append(t(h["event"], SANS, 700, 17, 26, 96, c["ink"], -0.01))
-    ps = 34
-    while ps > 22 and measure(h["project"], SANS, 700, ps, -0.03) > 262:
+    if not nxt:
+        size = 13 if len(big) <= 2 else 9.5
+        if h.get("first"):
+            b.append('<circle cx="28" cy="28" r="17" fill="%s"/>' % c["deep"])
+            b.append(t(big, SANS, 700, size, 28, 28 + size * 0.36, c["card"], anchor="middle"))
+        else:
+            b.append('<circle cx="28" cy="28" r="16" fill="%s" stroke="%s" stroke-width="2"/>' % (c["card"], c["violet"]))
+            b.append(t(big, SANS, 700, size, 28, 28 + size * 0.36, c["violet"], anchor="middle"))
+    ps = 21
+    while ps > 15 and measure(h["project"], SANS, 700, ps, -0.02) > W - 36:
         ps -= 1
-    b.append(t(h["project"], SANS, 700, ps, 25, 148, c["ink"] if nxt else c["violet"], -0.03))
-    y = 174
-    for line in wrap(h["pitch"], SANS, 400, 13.5, 240)[:2]:
-        b.append(t(line, SANS, 400, 13.5, 26, y, c["muted"]))
-        y += 19
+    b.append(t(h["project"], SANS, 700, ps, 18, 148, c["ink"], -0.02))
+    sub = h["event"] if nxt else "%s · %s" % (h["award"], h["event"])
+    ss = 11.5
+    while ss > 8.5 and measure(sub, SANS, 500, ss) > W - 36:
+        ss -= 0.25
+    b.append(t(sub, SANS, 500, ss, 18, 168, c["violet"]))
+    y = 192
+    for line in wrap(h["pitch"], SANS, 400, 12, W - 36)[:3]:
+        b.append(t(line, SANS, 400, 12, 18, y, c["muted"]))
+        y += 17
+    b.append('<path d="M18 %d L%d %d" stroke="%s" stroke-width="1"/>' % (H - 36, W - 18, H - 36, c["line"]))
+    b.append(t((h["date"] + " · " + h["place"]).upper(), MONO, 500, 8.5, 18, H - 17, c["muted"], 0.1))
     if h.get("kit"):
-        b.append(t("◆ UPIIXIA AGENTIC KIT", MONO, 500, 9.5, 26, H - 20, c["violet"], 0.12, opacity=".85"))
+        b.append(t("◆", MONO, 500, 11, W - 18, H - 16, c["violet"], anchor="end"))
     return svg(W, H, "%s · %s · %s · %s: %s" % (h["award"], h["event"], h["date"], h["project"], h["pitch"]), b)
 
 
-# ---------------------------------------------------------------- stack: a periodic table of tools
+# ---------------------------------------------------------------- stack: one section per theme
 def stack(c, data):
-    cols, tile, gap, top = 9, 94, 6, 40
-    items = [(g_i, n, s) for g_i, g in enumerate(data["stack"]) for n, s in g["items"]]
-    rows = (len(items) + cols - 1) // cols
-    W = cols * tile + (cols - 1) * gap
-    H = top + rows * (tile + gap) - gap
-    b, x = [], 0
+    W, label_w, pill_h, gap, row_gap, pad = 900, 168, 30, 8, 10, 22
+    b, y = [], 0
     for g_i, g in enumerate(data["stack"]):
-        b.append('<rect x="%.1f" y="6" width="12" height="12" rx="3" fill="%s" fill-opacity="%s"/>' % (
-            x, c["tint"], max(float(c["levels"][g_i]) * 2.2, 0.12)))
-        d, w = text_path(g["group"].upper(), MONO, 500, 10.5, x + 19, 16, 0.12)
-        b.append('<path d="%s" fill="%s"/>' % (d, c["muted"]))
-        x += 19 + w + 28
-    for i, (g_i, name, slug) in enumerate(items):
-        tx, ty = (i % cols) * (tile + gap), top + (i // cols) * (tile + gap)
-        b.append('<rect x="%d" y="%d" width="%d" height="%d" rx="12" fill="%s" fill-opacity="%s"/>' % (
-            tx, ty, tile, tile, c["tint"], c["levels"][g_i]))
-        b.append(t("%02d" % (i + 1), MONO, 500, 9, tx + 10, ty + 17, c["muted"], 0.05, opacity=".8"))
-        b.append(icon(slug, tx + tile / 2 - 13, ty + 24, 26, c["deep"] if g_i == 0 else c["violet"]))
-        size = 11.5 if measure(name, SANS, 500, 11.5) < tile - 12 else 10
-        b.append(t(name, SANS, 500, size, tx + tile / 2, ty + tile - 14, c["ink"], anchor="middle"))
+        y += pad if g_i else 4
+        top = y
+        # pills, wrapped
+        x, rows = label_w, 1
+        pills = []
+        for name, slug in g["items"]:
+            w = 12 + 16 + 8 + measure(name, SANS, 500, 13) + 14
+            if x + w > W:
+                x, y, rows = label_w, y + pill_h + row_gap, rows + 1
+            pills.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%d" rx="15" fill="%s" fill-opacity="%s" '
+                         'stroke="%s" stroke-opacity=".35"/>' % (x, y, w, pill_h, c["tint"], c["levels"][3], c["tint"])
+                         + icon(slug, x + 12, y + 7, 16, c["deep"] if g_i == 0 else c["violet"])
+                         + t(name, SANS, 500, 13, x + 12 + 16 + 8, y + 19.5, c["ink"]))
+            x += w + gap
+        b.append(t(g["group"].upper(), MONO, 500, 10.5, 0, top + 19, c["muted"], 0.14))
+        b.append(t("%02d" % len(g["items"]), MONO, 500, 10.5, 0, top + 36, c["violet"], 0.14))
+        b.extend(pills)
+        y += pill_h
+        if g_i < len(data["stack"]) - 1:
+            b.append('<path d="M0 %.1f L%d %.1f" stroke="%s" stroke-width="1"/>' % (y + pad / 2 + 1, W, y + pad / 2 + 1, c["line"]))
+    H = int(y + 14)
     return svg(W, H, "Stack. " + " ".join("%s: %s." % (g["group"], ", ".join(n for n, _ in g["items"]))
                                           for g in data["stack"]), b)
 
@@ -227,11 +304,11 @@ def render(data):
             files["hk-%s-%s.svg" % (slug(h["project"]), theme)] = card(c, h)
         if n:
             files["hk-next-%s.svg" % theme] = card(c, dict(n, big="?"), nxt=True)
-    cards = [picture("hk-" + slug(h["project"]), "%s · %s · %s" % (h["award"], h["event"], h["project"]), "49%",
+    cards = [picture("hk-" + slug(h["project"]), "%s · %s · %s" % (h["award"], h["event"], h["project"]), "24%",
                      h.get("url") or None) for h in data["hackathons"]]
     if n:
-        cards.append(picture("hk-next", n["event"], "49%", n.get("url")))
-    pairs = ["\n".join(cards[i:i + 2]) for i in range(0, len(cards), 2)]
+        cards.append(picture("hk-next", n["event"], "24%", n.get("url")))
+    pairs = ["\n".join(cards[i:i + 4]) for i in range(0, len(cards), 4)]
     blocks = {"header": picture("header", "Joahan Morales · AI Engineer, Full Stack, Backend", "100%"),
               "hackathons": '<p align="center">\n%s\n</p>' % "\n<br>\n".join(pairs),
               "stack": picture("stack", "Stack", "100%")}

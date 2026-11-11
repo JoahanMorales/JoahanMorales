@@ -46,17 +46,15 @@ Evaluaciones de profesores del IPN. Extensión de Chrome para armar horarios en 
 
 <!-- hackathons:start -->
 <p align="center">
-<a href="https://github.com/G10hdz/deus-ex-machina"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-axia-dark.svg"><img src="assets/gen/hk-axia-light.svg" width="49%" alt="1.º lugar · OpenAI × Kavak · AXIA"></picture></a>
-<a href="https://github.com/rvvictor/HackADA-Upiixia"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-mercaditos-dark.svg"><img src="assets/gen/hk-mercaditos-light.svg" width="49%" alt="1.º lugar · HackADA · Mercaditos"></picture></a>
+<a href="https://github.com/G10hdz/deus-ex-machina"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-axia-dark.svg"><img src="assets/gen/hk-axia-light.svg" width="24%" alt="1.º lugar · OpenAI × Kavak · AXIA"></picture></a>
+<a href="https://github.com/rvvictor/HackADA-Upiixia"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-mercaditos-dark.svg"><img src="assets/gen/hk-mercaditos-light.svg" width="24%" alt="1.º lugar · HackADA · Mercaditos"></picture></a>
+<a href="https://github.com/rvvictor/Chilangaton-Upiixia"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-comercio-popular-dark.svg"><img src="assets/gen/hk-comercio-popular-light.svg" width="24%" alt="1.º lugar · Chilangatón · Comercio popular"></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-mercuria-dark.svg"><img src="assets/gen/hk-mercuria-light.svg" width="24%" alt="1.º lugar · SEDECO × Saptiva AI · MercurIA"></picture>
 <br>
-<a href="https://github.com/rvvictor/Chilangaton-Upiixia"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-comercio-popular-dark.svg"><img src="assets/gen/hk-comercio-popular-light.svg" width="49%" alt="1.º lugar · Chilangatón · Comercio popular"></picture></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-mercuria-dark.svg"><img src="assets/gen/hk-mercuria-light.svg" width="49%" alt="1.º lugar · SEDECO × Saptiva AI · MercurIA"></picture>
-<br>
-<a href="https://github.com/FerVarg24/LumivIA"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-lumivia-dark.svg"><img src="assets/gen/hk-lumivia-light.svg" width="49%" alt="1.º Track IBM · Talent Land · LumivIA"></picture></a>
-<a href="https://github.com/AxolutionsDevs/EvenLabs-Hack"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-psyness-dark.svg"><img src="assets/gen/hk-psyness-light.svg" width="49%" alt="3.º + Best Bolt · ElevenLabs Hackathon · Psyness"></picture></a>
-<br>
-<a href="https://github.com/AxolutionsDevs/MobilityAI-Hackaton"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-railsense-dark.svg"><img src="assets/gen/hk-railsense-light.svg" width="49%" alt="Best Open Source · Mobility &amp; AI · RailSense"></picture></a>
-<a href="mailto:joahanmorales07@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-next-dark.svg"><img src="assets/gen/hk-next-light.svg" width="49%" alt="¿Organizas un hackathon?"></picture></a>
+<a href="https://github.com/FerVarg24/LumivIA"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-lumivia-dark.svg"><img src="assets/gen/hk-lumivia-light.svg" width="24%" alt="1.º Track IBM · Talent Land · LumivIA"></picture></a>
+<a href="https://github.com/AxolutionsDevs/EvenLabs-Hack"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-psyness-dark.svg"><img src="assets/gen/hk-psyness-light.svg" width="24%" alt="3.º + Best Bolt · ElevenLabs Hackathon · Psyness"></picture></a>
+<a href="https://github.com/AxolutionsDevs/MobilityAI-Hackaton"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-railsense-dark.svg"><img src="assets/gen/hk-railsense-light.svg" width="24%" alt="Best Open Source · Mobility &amp; AI · RailSense"></picture></a>
+<a href="mailto:joahanmorales07@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-next-dark.svg"><img src="assets/gen/hk-next-light.svg" width="24%" alt="¿Organizas un hackathon?"></picture></a>
 </p>
 <!-- hackathons:end -->
 
