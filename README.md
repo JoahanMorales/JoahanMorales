@@ -1,177 +1,84 @@
-# <div align="center">Hola, soy Joahan Morales</div>
-
-<div align="center">
-  
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=9D4EDD&center=true&vCenter=true&width=500&lines=Backend+Developer;Project+Manager;Estudiante+de+Ingenier%C3%ADa+Inform%C3%A1tica;Ganador+7x+de+Hackathons)](https://git.io/typing-svg)
-  
-</div>
-
-## Sobre mí
-
-<img align="right" alt="Coding Cat" width="380" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
-
-Soy un desarrollador backend y Project Manager apasionado por Java, con formación técnica en programación y actualmente cursando Ingeniería en Informática. Me especializo en construir sistemas escalables y eficientes que resuelven problemas reales.
-
-```java
-public class JoahanMorales {
-    
-    private final String rol = "Backend Developer & PM";
-    private final String educacion = "Ingeniería en Informática";
-    private final int hackathonsGanados = 7;
-    private final List<String> especialidades = Arrays.asList(
-        "Desarrollo de APIs REST",
-        "Arquitectura de Microservicios",
-        "Optimización de Bases de Datos",
-        "Project Management"
-    );
-    
-    public void currentFocus() {
-        System.out.println("Spring Boot & Cloud Computing");
-        System.out.println("Arquitecturas escalables");
-        System.out.println("Clean Code & Best Practices");
-    }
-}
-```
-
-- Actualmente trabajando con Java y Spring Boot
-- Project Manager con experiencia en gestión de equipos
-- Ganador de 7 Hackathons
-- Aprendiendo arquitecturas de microservicios y cloud computing
-- Interesado en diseño de APIs REST y optimización de bases de datos
-- Estudiante de Ingeniería en Informática
-
-<br clear="right"/>
-
-## Stack Tecnológico
-
-<div align="center">
-
-### Lenguajes de Programación
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
-
-### Backend & Frameworks
-![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
-![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
-![JUnit](https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white)
-
-### Frontend
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
-### Bases de Datos
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-
-### Herramientas & DevOps
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-
-</div>
-
-## Estadísticas de GitHub
-
-<div align="center">
-  
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=radical&hide_border=true&background=0D1117&stroke=9D4EDD&ring=C77DFF&fire=9D4EDD&currStreakLabel=9D4EDD&sideLabels=9D4EDD&currStreakNum=C77DFF&sideNums=C77DFF" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=default&hide_border=true&background=FFFFFF&stroke=9D4EDD&ring=C77DFF&fire=9D4EDD&currStreakLabel=9D4EDD&sideLabels=9D4EDD&currStreakNum=C77DFF&sideNums=C77DFF" />
-  <img width="70%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=JoahanMorales&theme=default&hide_border=true&background=FFFFFF&stroke=9D4EDD&ring=C77DFF&fire=9D4EDD&currStreakLabel=9D4EDD&sideLabels=9D4EDD&currStreakNum=C77DFF&sideNums=C77DFF" alt="GitHub Streak" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.png">
+  <img alt="Joahan Morales · AI Engineer, Full Stack, Backend · 7× hackathon winner" src="assets/header-light.png" width="100%">
 </picture>
 
-</div>
+<img align="right" width="300" alt="Coding cat" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
 
-<div align="center">
+Desarrollo backends, agentes de IA y automatización que siguen funcionando después de la demo.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=dracula" />
-  <source media="(prefers-color-scheme: light)" srcset="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=default" />
-  <img width="90%" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoahanMorales&theme=default" alt="GitHub Profile Details" />
-</picture>
+En el **IPN** mantengo sistemas y APIs institucionales con Java, ColdFusion y Oracle. Fuera de ahí construyo herramientas para que varios agentes de IA trabajen en equipo sin pisarse, y compito en hackathons con mi equipo.
 
-</div>
+Presido **UPIIXIA**, el club de IA de UPIICSA, y soy **IBM Z Student Ambassador**.
 
-## Proyectos Destacados
+<br clear="right">
 
-<div align="center">
+### Proyectos
 
-<!-- Descomenta cuando tengas proyectos
 <table>
-  <tr>
-    <td width="50%">
-      <h3 align="center">Nombre del Proyecto</h3>
-      <div align="center">
-        <a href="link-al-repo" target="_blank">
-          <img src="https://via.placeholder.com/400x200/9D4EDD/FFFFFF?text=Screenshot+del+Proyecto" width="400" alt="Proyecto 1"/>
-        </a>
-        <p>
-          <a href="link-al-repo" target="_blank">
-            <img src="https://img.shields.io/badge/CÓDIGO-9D4EDD?style=for-the-badge&logo=github&logoColor=white">
-          </a>
-          <a href="link-demo" target="_blank">
-            <img src="https://img.shields.io/badge/DEMO-C77DFF?style=for-the-badge&logo=vercel&logoColor=white">
-          </a>
-        </p>
-        <p><strong>Java, Spring Boot, PostgreSQL</strong> - Descripción breve del proyecto y sus características principales.</p>
-      </div>
-    </td>
-    <td width="50%">
-      <h3 align="center">Otro Proyecto</h3>
-      <div align="center">
-        <a href="link-al-repo" target="_blank">
-          <img src="https://via.placeholder.com/400x200/C77DFF/FFFFFF?text=Screenshot+del+Proyecto" width="400" alt="Proyecto 2"/>
-        </a>
-        <p>
-          <a href="link-al-repo" target="_blank">
-            <img src="https://img.shields.io/badge/CÓDIGO-9D4EDD?style=for-the-badge&logo=github&logoColor=white">
-          </a>
-          <a href="link-demo" target="_blank">
-            <img src="https://img.shields.io/badge/DEMO-C77DFF?style=for-the-badge&logo=vercel&logoColor=white">
-          </a>
-        </p>
-        <p><strong>Python, React, MongoDB</strong> - Descripción breve del proyecto y sus características principales.</p>
-      </div>
-    </td>
-  </tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/JoahanMorales/upiixia-agentic-kit"><img src="assets/card-kit.png" alt="UPIIXIA Agentic Kit" width="100%"></a>
+<h4>UPIIXIA Agentic Kit</h4>
+Varios agentes de IA en el mismo repo: cada uno toma una tarea, escribe la prueba primero, otro agente lo revisa y nadie pisa el trabajo de otro. Funciona en Claude Code, Codex, Cursor y Gemini CLI.
+<br><br>
+<sub>Bash · Python · Git &nbsp;·&nbsp; con él ganamos 3 de los hackathons de abajo</sub>
+<br><br>
+<a href="https://github.com/JoahanMorales/upiixia-agentic-kit"><img src="https://img.shields.io/github/stars/JoahanMorales/upiixia-agentic-kit?style=flat&label=stars&labelColor=1a1625&color=8b5cf6" alt="stars"></a>
+<a href="https://github.com/JoahanMorales/upiixia-agentic-kit/releases/latest"><img src="https://img.shields.io/github/v/release/JoahanMorales/upiixia-agentic-kit?style=flat&label=release&labelColor=1a1625&color=8b5cf6" alt="release"></a>
+</td>
+<td width="50%" valign="top">
+<a href="https://ipnprofes.com"><img src="assets/card-ipnprofes.png" alt="IPNProfes" width="100%"></a>
+<h4>IPNProfes</h4>
+Evaluaciones de profesores del IPN con acceso seudónimo, hechas por estudiantes. Incluye una extensión de Chrome que arma horarios sin traslapes y muestra la calificación de cada profe dentro del SAES.
+<br><br>
+<sub>React · Supabase · Cloudflare &nbsp;·&nbsp; proyecto estudiantil independiente</sub>
+<br><br>
+<a href="https://ipnprofes.com"><img src="https://img.shields.io/badge/ipnprofes.com-visitar-8b5cf6?style=flat&labelColor=1a1625" alt="ipnprofes.com"></a>
+</td>
+</tr>
 </table>
--->
 
-### Actualmente trabajando en proyectos personales...
+### 7 hackathons ganados
 
-</div>
+| | Hackathon | Proyecto |
+|:--|:--|:--|
+| **1.º** | OpenAI × Kavak · CDMX | **AXIA**: detecta daños en autos, estima la reparación y aprende de lo que se le escapa |
+| **1.º** | Chilangatón 2026 · SEDECO, Mexico Tech Week | Mapa vivo del comercio popular por día y hora |
+| **1.º** | HackADA 2026 · SECIHTI Puebla, NVIDIA, Saptiva AI | Rutas de compra 100 % local para los mercaditos |
+| **1.º** | Hackathon SEDECO × Saptiva AI | **MercurIA**: dónde poner un festival para que la derrama llegue a las MiPyMEs |
+| **1.º** · Track IBM | Talent Land 2026 | **LumivIA**: rutas que cuidan el ambiente, con IBM watsonx |
+| **3.º** · Best Bolt Project | AI Tinkerers × ElevenLabs · CDMX | **Psyness**: agente de soporte emocional con voz en tiempo real |
+| **Best Open Source** | Mobility & AI Hackathon · ÖBB | **RailSense**: la satisfacción del pasajero, Viena contra CDMX |
 
-## Conecta conmigo
+### Experiencia
 
-<div align="center">
-  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joahan-morales/)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:joahanmorales07@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JoahanMorales)
+- **Full Stack Software Engineer** · IPN, Centro Nacional de Cálculo &nbsp;<sub>2026 – hoy</sub><br>
+  Sistemas y APIs internos del IPN con Java, ColdFusion, Oracle y JavaScript; automatización de procesos administrativos.
+- **IBM Z Student Ambassador** · IBM &nbsp;<sub>2026 – hoy</sub><br>
+  Mainframe de IBM y Python.
+- **Software Developer & Process Automation Analyst** · Prestigio en Traslado Automotriz &nbsp;<sub>2025 – 2026</sub><br>
+  Una extensión de navegador que llena los formularios del SAT redujo 50 % el tiempo de captura.
 
-</div>
+### Stack
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java%2Cspring%2Cpython%2Cjs%2Cts%2Creact%2Cnodejs%2Cpostgres%2Cmysql%2Cmongodb%2Credis%2Csupabase%2Ccloudflare%2Cdocker%2Cgit%2Clinux&theme=dark&perline=8">
+  <img alt="Java, Spring, Python, JavaScript, TypeScript, React, Node.js, PostgreSQL, MySQL, MongoDB, Redis, Supabase, Cloudflare, Docker, Git, Linux" src="https://skillicons.dev/icons?i=java,spring,python,js,ts,react,nodejs,postgres,mysql,mongodb,redis,supabase,cloudflare,docker,git,linux&theme=light&perline=8">
+</picture>
 
-<div align="center">
+### Actividad
 
-<img src="https://komarev.com/ghpvc/?username=JoahanMorales&label=VISITAS&color=9D4EDD&style=for-the-badge" alt="Profile views" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=JoahanMorales&hide_border=true&background=00000000&ring=8B5CF6&fire=A78BFA&currStreakNum=E9E6F2&sideNums=E9E6F2&currStreakLabel=A78BFA&sideLabels=8E86A3&dates=8E86A3&stroke=2A2438&locale=es">
+  <img alt="Racha de contribuciones" src="https://streak-stats.demolab.com/?user=JoahanMorales&hide_border=true&background=00000000&ring=7C3AED&fire=8B5CF6&currStreakNum=16121F&sideNums=16121F&currStreakLabel=6D28D9&sideLabels=6B6480&dates=6B6480&stroke=E4DEF5&locale=es" width="100%">
+</picture>
 
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/JoahanMorales/JoahanMorales/output/contributions-dark.svg">
+  <img alt="Contribuciones del último año" src="https://raw.githubusercontent.com/JoahanMorales/JoahanMorales/output/contributions-light.svg" width="100%">
+</picture>
 
-<div align="center">
-  
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=9D4EDD&height=120&section=footer" width="100%"/>
-  
-</div>
+### Conecta conmigo
+
+<a href="https://www.linkedin.com/in/joahan-morales/"><img src="https://img.shields.io/badge/LinkedIn-joahan--morales-8b5cf6?style=flat&labelColor=1a1625" alt="LinkedIn"></a> <a href="mailto:joahanmorales07@gmail.com"><img src="https://img.shields.io/badge/correo-joahanmorales07%40gmail.com-8b5cf6?style=flat&labelColor=1a1625" alt="Correo"></a> <img src="https://komarev.com/ghpvc/?username=JoahanMorales&label=visitas&color=8b5cf6&style=flat&labelColor=1a1625" alt="Visitas">
