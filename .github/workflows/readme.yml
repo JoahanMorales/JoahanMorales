@@ -1,9 +1,9 @@
-# Edit data/profile.json (a new hackathon, a new tool) and the README rebuilds itself.
+# Edit data/profile.json (a new hackathon, a new tool) and the README and its vector images rebuild themselves.
 name: readme
 on:
   push:
     branches: [main]
-    paths: [data/**, scripts/**]
+    paths: [data/**, scripts/**, assets/fonts/**]
   workflow_dispatch:
 permissions:
   contents: write
@@ -12,10 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 scripts/build_readme.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install fonttools uharfbuzz
+      - run: python scripts/build_readme.py
       - run: |
-          git diff --quiet README.md && exit 0
+          git add README.md assets/gen assets/icons
+          git diff --cached --quiet && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -am "README: rebuilt from data/profile.json"
+          git commit -m "README: rebuilt from data/profile.json"
           git push
