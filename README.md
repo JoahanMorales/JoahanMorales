@@ -67,8 +67,8 @@ Evaluaciones de profesores del IPN. Extensión de Chrome para armar horarios en 
 ### Actividad
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=JoahanMorales&hide_border=true&background=00000000&ring=8B5CF6&fire=A78BFA&currStreakNum=E9E6F2&sideNums=E9E6F2&currStreakLabel=A78BFA&sideLabels=8E86A3&dates=8E86A3&stroke=2A2438&locale=es">
-  <img alt="Racha de contribuciones" src="https://streak-stats.demolab.com/?user=JoahanMorales&hide_border=true&background=00000000&ring=7C3AED&fire=8B5CF6&currStreakNum=16121F&sideNums=16121F&currStreakLabel=6D28D9&sideLabels=6B6480&dates=6B6480&stroke=E4DEF5&locale=es" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=JoahanMorales&hide_border=true&background=00000000&ring=8B5CF6&fire=A78BFA&currStreakNum=E9E6F2&sideNums=E9E6F2&currStreakLabel=A78BFA&sideLabels=8E86A3&dates=8E86A3&stroke=2A2438&locale=es&v=2">
+  <img alt="Racha de contribuciones" src="https://streak-stats.demolab.com/?user=JoahanMorales&hide_border=true&background=00000000&ring=7C3AED&fire=8B5CF6&currStreakNum=16121F&sideNums=16121F&currStreakLabel=6D28D9&sideLabels=6B6480&dates=6B6480&stroke=E4DEF5&locale=es&v=2" width="100%">
 </picture>
 
 <picture>
