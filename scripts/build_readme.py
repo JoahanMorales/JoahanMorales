@@ -158,15 +158,15 @@ def motif(kind, c):
     v, d, tint = c["violet"], c["deep"], c["tint"]
     st = 'fill="none" stroke="%s" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"' % v
     if kind == "car":  # a car under a detection box
-        return ('<g class="car"><path %s d="M44 82 L56 62 Q61 55 72 55 L124 55 Q136 55 144 62 L160 76 L172 78 Q180 80 180 88 L180 90 '
+        return ('<path %s d="M44 82 L56 62 Q61 55 72 55 L124 55 Q136 55 144 62 L160 76 L172 78 Q180 80 180 88 L180 90 '
                 'L44 90 Z"/><path %s d="M70 62 L82 62 L82 74 L60 74 Z M92 62 L124 62 Q130 62 134 66 L141 74 L92 74 Z"/>'
-                '<circle cx="76" cy="91" r="10" fill="%s" stroke="%s" stroke-width="2"/><circle cx="150" cy="91" r="10" fill="%s" stroke="%s" stroke-width="2"/></g>'
+                '<circle cx="76" cy="91" r="10" fill="%s" stroke="%s" stroke-width="2"/><circle cx="150" cy="91" r="10" fill="%s" stroke="%s" stroke-width="2"/>'
                 '<g class="bx"><rect x="134" y="66" width="44" height="40" rx="3" fill="none" stroke="%s" stroke-width="1.6" '
                 'stroke-dasharray="4 4"/><circle cx="178" cy="66" r="4" fill="%s"/></g>'
                 % (st, st, c["card"], v, c["card"], v, d, d))
     if kind == "route":  # a dotted route between neighbourhood shops
-        pins = "".join('<circle class="pin" style="animation-delay:-%.1fs" cx="%d" cy="%d" r="%d" fill="%s"/>'
-                       % (i * 0.8, x, y, r, col) for i, (x, y, r, col) in enumerate( ((32, 84, 6, d), (96, 52, 5, v), (138, 76, 5, v), (184, 34, 7, d))))
+        pins = "".join('<circle cx="%d" cy="%d" r="%d" fill="%s"/>' % (x, y, r, col)
+                       for x, y, r, col in ((32, 84, 6, d), (96, 52, 5, v), (138, 76, 5, v), (184, 34, 7, d)))
         shops = "".join('<rect x="%d" y="%d" width="9" height="9" rx="2" fill="%s" fill-opacity=".35"/>' % (x, y, tint)
                         for x, y in ((58, 30), (112, 92), (160, 54), (70, 94), (186, 82)))
         return ('<path class="rt" d="M32 84 C56 40 80 46 96 52 S126 86 138 76 S170 30 184 34" fill="none" stroke="%s" '
@@ -201,7 +201,7 @@ def motif(kind, c):
     if kind == "wave":  # a voice
         hs = [6, 10, 16, 26, 38, 30, 20, 44, 58, 46, 32, 52, 64, 50, 36, 24, 40, 30, 18, 26, 14, 8, 12, 6]
         return "".join('<rect class="wb" style="animation-delay:-%.2fs" x="%d" y="%.1f" width="5" height="%d" rx="2.5" fill="%s"%s/>' % (
-            (i * 0.37) % 1.6, 25 + i * 7, 57 - h / 2, h, d if 7 <= i <= 13 else v, "" if 7 <= i <= 13 else ' fill-opacity=".55"')
+            (i * 0.37) % 1.2, 25 + i * 7, 57 - h / 2, h, d if 7 <= i <= 13 else v, "" if 7 <= i <= 13 else ' fill-opacity=".55"')
             for i, h in enumerate(hs))
     if kind == "metro":  # two lines, two cities
         a = '<path d="M20 38 L96 38 L132 74 L196 74" fill="none" stroke="%s" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>' % d
@@ -228,28 +228,24 @@ def motif(kind, c):
             % (c["muted"], t("?", SANS, 700, 44, 107, 74, c["muted"], anchor="middle")))
 
 
-# a loop per drawing; SVGs inside <img> on GitHub can animate with CSS but cannot react to hover
+# a slow loop per drawing; SVGs inside <img> on GitHub can animate with CSS but cannot react to hover
 FB = "transform-box:fill-box;transform-origin:center;"
 MOTION = {
-    "car": ".bx{" + FB + "animation:scan 2.6s ease-in-out infinite}.bx rect{animation:march 1.4s linear infinite}"
-           ".car{animation:ride 1.3s ease-in-out infinite alternate}"
-           "@keyframes scan{50%{opacity:.25;transform:scale(1.15)}}@keyframes march{to{stroke-dashoffset:-8}}"
-           "@keyframes ride{to{transform:translateY(-2px)}}",
-    "route": ".rt{animation:walk 1.6s linear infinite}@keyframes walk{to{stroke-dashoffset:-16}}"
-             ".pin{" + FB + "animation:pop 3.2s ease-in-out infinite}@keyframes pop{50%{transform:scale(1.5)}}",
-    "awning": ".pr{animation:bob 3s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-8px)}}",
-    "voronoi": ".vc{animation:pulse 3s ease-in-out infinite}.ry{" + FB + "animation:rays 3s ease-in-out infinite}"
-               "@keyframes pulse{50%{opacity:.3}}@keyframes rays{50%{transform:scale(1.4);opacity:.35}}",
-    "leaf": ".lf{transform-box:fill-box;transform-origin:0 0;animation:sway 3.6s ease-in-out infinite}"
+    "car": ".bx{animation:blink 1.8s ease-in-out infinite}.bx rect{animation:march 1s linear infinite}"
+           "@keyframes blink{50%{opacity:.3}}@keyframes march{to{stroke-dashoffset:-8}}",
+    "route": ".rt{animation:walk 1.4s linear infinite}@keyframes walk{to{stroke-dashoffset:-16}}",
+    "awning": ".pr{animation:bob 2.4s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-4px)}}",
+    "voronoi": ".vc,.ry{animation:pulse 2.6s ease-in-out infinite}@keyframes pulse{50%{opacity:.55}}",
+    "leaf": ".lf{transform-box:fill-box;transform-origin:0 0;animation:sway 3.2s ease-in-out infinite}"
             ".cl{animation:drift 5s ease-in-out infinite alternate}"
-            "@keyframes sway{50%{transform:rotate(-18deg)}}@keyframes drift{to{transform:translateX(26px)}}",
-    "wave": ".wb{" + FB + "animation:eq 1.6s ease-in-out infinite alternate}"
-            "@keyframes eq{from{transform:scaleY(.2)}to{transform:scaleY(1.1)}}",
-    "metro": ".tn{stroke-width:4;stroke-dasharray:20 100;stroke-dashoffset:20;animation:run 5s linear infinite}"
+            "@keyframes sway{50%{transform:rotate(-7deg)}}@keyframes drift{to{transform:translateX(10px)}}",
+    "wave": ".wb{" + FB + "animation:eq 1.2s ease-in-out infinite alternate}"
+            "@keyframes eq{from{transform:scaleY(.4)}to{transform:scaleY(1)}}",
+    "metro": ".tn{stroke-dasharray:9 100;stroke-dashoffset:9;animation:run 4s linear infinite}"
              "@keyframes run{to{stroke-dashoffset:-100}}",
-    "baseball": ".tr{stroke-width:5;stroke-dasharray:24 100;stroke-dashoffset:24;animation:run 3s ease-in infinite}"
-                ".bl{" + FB + "animation:spin 2.4s linear infinite}"
-                "@keyframes run{75%,to{stroke-dashoffset:-100}}@keyframes spin{to{transform:rotate(360deg)}}",
+    "baseball": ".tr{stroke-dasharray:10 100;stroke-dashoffset:10;animation:run 2.2s ease-in infinite}"
+                ".bl{" + FB + "animation:spin 2.2s linear infinite}"
+                "@keyframes run{70%,to{stroke-dashoffset:-100}}@keyframes spin{to{transform:rotate(360deg)}}",
 }
 
 
