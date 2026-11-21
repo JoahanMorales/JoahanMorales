@@ -2,7 +2,7 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/header-dark.svg"><img src="assets/gen/header-light.svg" width="100%" alt="Joahan Morales · AI Engineer, Full Stack, Backend"></picture>
 <!-- header:end -->
 
-<img align="right" width="260" alt="Coding cat" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
+<img align="right" width="30%" alt="Coding cat" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
 
 Full stack en el IPN · AI Engineer · 8 hackathons ganados.<br>
 Hice IPNProfes y el UPIIXIA Agentic Kit.<br>
