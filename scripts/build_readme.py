@@ -107,7 +107,8 @@ def icon(slug, x, y, size, color):
 
 
 # ---------------------------------------------------------------- header
-SEVEN = {(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (2, 5), (3, 4), (4, 3), (5, 3)}
+DIGITS = {7: {(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (2, 5), (3, 4), (4, 3), (5, 3)},
+          8: {(1, 2), (1, 3), (1, 4), (2, 1), (2, 5), (3, 2), (3, 3), (3, 4), (4, 1), (4, 5), (5, 2), (5, 3), (5, 4)}}
 
 
 def header(c, hk):
@@ -127,7 +128,7 @@ def header(c, hk):
     gx, gy = W - 8 - (7 * cell + 6 * gap), 6
     for r in range(7):
         for col in range(7):
-            on = (r, col) in SEVEN
+            on = (r, col) in DIGITS[hk]
             b.append('<rect x="%d" y="%d" width="%d" height="%d" rx="4" fill="%s"%s/>' % (
                 gx + col * (cell + gap), gy + r * (cell + gap), cell, cell, c["deep"] if on else c["tint"],
                 "" if on else ' fill-opacity="%s"' % c["levels"][4]))
@@ -209,6 +210,14 @@ def motif(kind, c):
                       for x, y, col in ((20, 38, d), (66, 38, d), (114, 56, d), (164, 74, d), (196, 74, d),
                                         (44, 100, v), (64, 50, v), (140, 30, v), (196, 30, v)))
         return a + b2 + st_
+    if kind == "baseball":  # the same pitch at sea level and at 2,240 m
+        return ('<path d="M18 112 L48 82 L64 96 L88 70 L120 112 Z" fill="%s" fill-opacity=".25"/>'
+                '<path d="M58 50 C100 34 140 58 166 94" fill="none" stroke="%s" stroke-width="2" stroke-opacity=".45" '
+                'stroke-linecap="round" stroke-dasharray="2 6"/><circle cx="166" cy="94" r="7" fill="%s" fill-opacity=".45"/>'
+                '<path d="M58 50 C100 36 150 42 176 62" fill="none" stroke="%s" stroke-width="2.4" stroke-linecap="round"/>'
+                '<circle cx="180" cy="64" r="13" fill="%s" stroke="%s" stroke-width="2"/>'
+                '<path d="M172 55 Q178 64 172 73 M188 55 Q182 64 188 73" fill="none" stroke="%s" stroke-width="1.6" '
+                'stroke-linecap="round" stroke-dasharray="2 2.4"/>' % (tint, v, v, d, c["card"], d, d))
     # next: an open seat
     return ('<circle cx="107" cy="58" r="34" fill="none" stroke="%s" stroke-width="2" stroke-dasharray="5 6"/>%s'
             % (c["muted"], t("?", SANS, 700, 44, 107, 74, c["muted"], anchor="middle")))

@@ -4,7 +4,7 @@
 
 <img align="right" width="260" alt="Coding cat" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
 
-Full stack en el IPN · AI Engineer · 7 hackathons ganados.<br>
+Full stack en el IPN · AI Engineer · 8 hackathons ganados.<br>
 Hice IPNProfes y el UPIIXIA Agentic Kit.<br>
 Presidente de UPIIXIA · IBM Z Student Ambassador.
 
@@ -46,11 +46,12 @@ Evaluaciones de profesores del IPN. Extensión de Chrome para armar horarios en 
 
 <!-- hackathons:start -->
 <p align="center">
+<a href="https://github.com/JoahanMorales/stuffplus2240"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-stuff-2240-isac-x-diablos-rojos-dark.svg"><img src="assets/gen/hk-stuff-2240-isac-x-diablos-rojos-light.svg" width="24%" alt="1.º lugar · ISAC × Diablos Rojos · Stuff+ 2240"></picture></a>
 <a href="https://github.com/G10hdz/deus-ex-machina"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-axia-openai-x-kavak-dark.svg"><img src="assets/gen/hk-axia-openai-x-kavak-light.svg" width="24%" alt="1.º lugar · OpenAI × Kavak · AXIA"></picture></a>
 <a href="https://github.com/rvvictor/HackADA-Upiixia"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-colonia-hackada-dark.svg"><img src="assets/gen/hk-colonia-hackada-light.svg" width="24%" alt="1.º lugar · HackADA · colonIA"></picture></a>
 <a href="https://github.com/rvvictor/Chilangaton-Upiixia"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-colonia-chilangaton-dark.svg"><img src="assets/gen/hk-colonia-chilangaton-light.svg" width="24%" alt="1.º lugar · Chilangatón · colonIA"></picture></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-mercuria-sedeco-x-saptiva-ai-dark.svg"><img src="assets/gen/hk-mercuria-sedeco-x-saptiva-ai-light.svg" width="24%" alt="1.º lugar · SEDECO × Saptiva AI · MercurIA"></picture>
 <br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-mercuria-sedeco-x-saptiva-ai-dark.svg"><img src="assets/gen/hk-mercuria-sedeco-x-saptiva-ai-light.svg" width="24%" alt="1.º lugar · SEDECO × Saptiva AI · MercurIA"></picture>
 <a href="https://github.com/FerVarg24/LumivIA"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-lumivia-talent-land-dark.svg"><img src="assets/gen/hk-lumivia-talent-land-light.svg" width="24%" alt="1.º Track IBM · Talent Land · LumivIA"></picture></a>
 <a href="https://github.com/AxolutionsDevs/EvenLabs-Hack"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-psyness-elevenlabs-hackathon-dark.svg"><img src="assets/gen/hk-psyness-elevenlabs-hackathon-light.svg" width="24%" alt="3.º + Best Bolt · ElevenLabs Hackathon · Psyness"></picture></a>
 <a href="https://github.com/AxolutionsDevs/MobilityAI-Hackaton"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gen/hk-railsense-mobility-ai-dark.svg"><img src="assets/gen/hk-railsense-mobility-ai-light.svg" width="24%" alt="Best Open Source · Mobility &amp; AI · RailSense"></picture></a>
