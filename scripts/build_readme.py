@@ -161,15 +161,15 @@ def motif(kind, c):
         return ('<path %s d="M44 82 L56 62 Q61 55 72 55 L124 55 Q136 55 144 62 L160 76 L172 78 Q180 80 180 88 L180 90 '
                 'L44 90 Z"/><path %s d="M70 62 L82 62 L82 74 L60 74 Z M92 62 L124 62 Q130 62 134 66 L141 74 L92 74 Z"/>'
                 '<circle cx="76" cy="91" r="10" fill="%s" stroke="%s" stroke-width="2"/><circle cx="150" cy="91" r="10" fill="%s" stroke="%s" stroke-width="2"/>'
-                '<rect x="134" y="66" width="44" height="40" rx="3" fill="none" stroke="%s" stroke-width="1.6" '
-                'stroke-dasharray="4 4"/><circle cx="178" cy="66" r="4" fill="%s"/>'
+                '<g class="bx"><rect x="134" y="66" width="44" height="40" rx="3" fill="none" stroke="%s" stroke-width="1.6" '
+                'stroke-dasharray="4 4"/><circle cx="178" cy="66" r="4" fill="%s"/></g>'
                 % (st, st, c["card"], v, c["card"], v, d, d))
     if kind == "route":  # a dotted route between neighbourhood shops
         pins = "".join('<circle cx="%d" cy="%d" r="%d" fill="%s"/>' % (x, y, r, col)
                        for x, y, r, col in ((32, 84, 6, d), (96, 52, 5, v), (138, 76, 5, v), (184, 34, 7, d)))
         shops = "".join('<rect x="%d" y="%d" width="9" height="9" rx="2" fill="%s" fill-opacity=".35"/>' % (x, y, tint)
                         for x, y in ((58, 30), (112, 92), (160, 54), (70, 94), (186, 82)))
-        return ('<path d="M32 84 C56 40 80 46 96 52 S126 86 138 76 S170 30 184 34" fill="none" stroke="%s" '
+        return ('<path class="rt" d="M32 84 C56 40 80 46 96 52 S126 86 138 76 S170 30 184 34" fill="none" stroke="%s" '
                 'stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 7"/>%s%s' % (v, shops, pins))
     if kind == "awning":  # a tianguis awning
         bands = "".join('<rect x="%d" y="26" width="17" height="30" fill="%s"%s/>' % (
@@ -178,30 +178,30 @@ def motif(kind, c):
             34 + i * 17, d if i % 2 == 0 else tint, "" if i % 2 == 0 else ' fill-opacity=".25"') for i in range(9))
         return ('<rect x="30" y="20" width="161" height="8" rx="4" fill="%s"/>%s%s'
                 '<path %s d="M38 64 L38 100 M183 64 L183 100 M28 100 L194 100"/>'
-                '<rect x="62" y="80" width="22" height="14" rx="3" fill="%s" fill-opacity=".35"/>'
-                '<rect x="96" y="76" width="30" height="18" rx="3" fill="%s" fill-opacity=".55"/>'
-                '<rect x="138" y="82" width="18" height="12" rx="3" fill="%s" fill-opacity=".35"/>'
+                '<rect class="pr" x="62" y="80" width="22" height="14" rx="3" fill="%s" fill-opacity=".35"/>'
+                '<rect class="pr" style="animation-delay:-.8s" x="96" y="76" width="30" height="18" rx="3" fill="%s" fill-opacity=".55"/>'
+                '<rect class="pr" style="animation-delay:-1.6s" x="138" y="82" width="18" height="12" rx="3" fill="%s" fill-opacity=".35"/>'
                 % (v, bands, scal, st, tint, tint, tint))
     if kind == "voronoi":  # zones of the city, one picked
         cells = [("M20 18 L82 18 L72 58 L20 70 Z", ".10"), ("M82 18 L150 18 L132 50 L72 58 Z", ".22"),
                  ("M150 18 L196 18 L196 62 L132 50 Z", ".14"), ("M20 70 L72 58 L88 100 L20 100 Z", ".18"),
                  ("M72 58 L132 50 L146 92 L88 100 Z", "1"), ("M132 50 L196 62 L196 100 L146 92 Z", ".08"),
                  ("M146 92 L196 100 L146 100 Z", ".2")]
-        out = "".join('<path d="%s" fill="%s" fill-opacity="%s" stroke="%s" stroke-width="1.6" stroke-linejoin="round"/>'
-                      % (p, d if op == "1" else tint, op, c["card"]) for p, op in cells)
-        return out + '<circle cx="110" cy="76" r="5" fill="%s"/><path %s d="M110 60 L110 50 M98 64 L91 57 M122 64 L129 57"/>' % (
+        out = "".join('<path%s d="%s" fill="%s" fill-opacity="%s" stroke="%s" stroke-width="1.6" stroke-linejoin="round"/>'
+                      % (' class="vc"' if op == "1" else "", p, d if op == "1" else tint, op, c["card"]) for p, op in cells)
+        return out + '<circle cx="110" cy="76" r="5" fill="%s"/><path class="ry" %s d="M110 60 L110 50 M98 64 L91 57 M122 64 L129 57"/>' % (
             c["card"], 'fill="none" stroke="%s" stroke-width="2" stroke-linecap="round"' % c["card"])
     if kind == "leaf":  # a route that bends for cleaner air
         return ('<path d="M24 92 C70 92 76 40 120 44 S170 86 194 40" fill="none" stroke="%s" stroke-width="2.4" '
                 'stroke-linecap="round"/><circle cx="24" cy="92" r="5" fill="%s"/><circle cx="194" cy="40" r="6" fill="%s"/>'
-                '<path d="M150 22 C176 18 188 30 186 48 C164 52 148 42 150 22 Z" fill="%s" fill-opacity=".85"/>'
-                '<path d="M154 26 L180 44" stroke="%s" stroke-width="1.6" stroke-linecap="round"/>'
-                '<g fill="%s" fill-opacity=".25"><circle cx="58" cy="40" r="10"/><circle cx="72" cy="34" r="13"/>'
+                '<g class="lf"><path d="M150 22 C176 18 188 30 186 48 C164 52 148 42 150 22 Z" fill="%s" fill-opacity=".85"/>'
+                '<path d="M154 26 L180 44" stroke="%s" stroke-width="1.6" stroke-linecap="round"/></g>'
+                '<g class="cl" fill="%s" fill-opacity=".25"><circle cx="58" cy="40" r="10"/><circle cx="72" cy="34" r="13"/>'
                 '<circle cx="88" cy="40" r="9"/></g>' % (v, d, d, d, c["card"], tint))
     if kind == "wave":  # a voice
         hs = [6, 10, 16, 26, 38, 30, 20, 44, 58, 46, 32, 52, 64, 50, 36, 24, 40, 30, 18, 26, 14, 8, 12, 6]
-        return "".join('<rect x="%d" y="%.1f" width="5" height="%d" rx="2.5" fill="%s"%s/>' % (
-            25 + i * 7, 57 - h / 2, h, d if 7 <= i <= 13 else v, "" if 7 <= i <= 13 else ' fill-opacity=".55"')
+        return "".join('<rect class="wb" style="animation-delay:-%.2fs" x="%d" y="%.1f" width="5" height="%d" rx="2.5" fill="%s"%s/>' % (
+            (i * 0.37) % 1.2, 25 + i * 7, 57 - h / 2, h, d if 7 <= i <= 13 else v, "" if 7 <= i <= 13 else ' fill-opacity=".55"')
             for i, h in enumerate(hs))
     if kind == "metro":  # two lines, two cities
         a = '<path d="M20 38 L96 38 L132 74 L196 74" fill="none" stroke="%s" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>' % d
@@ -209,18 +209,44 @@ def motif(kind, c):
         st_ = "".join('<circle cx="%d" cy="%d" r="5" fill="%s" stroke="%s" stroke-width="2.4"/>' % (x, y, c["card"], col)
                       for x, y, col in ((20, 38, d), (66, 38, d), (114, 56, d), (164, 74, d), (196, 74, d),
                                         (44, 100, v), (64, 50, v), (140, 30, v), (196, 30, v)))
-        return a + b2 + st_
+        trains = "".join('<path class="tn" style="animation-delay:%s" d="%s" fill="none" stroke="%s" stroke-width="3" '
+                         'stroke-linecap="round" pathLength="100"/>' % (dl, p, c["card"])
+                         for dl, p in (("0s", "M20 38 L96 38 L132 74 L196 74"), ("-2s", "M44 100 L44 70 L84 30 L196 30")))
+        return a + b2 + trains + st_
     if kind == "baseball":  # the same pitch at sea level and at 2,240 m
         return ('<path d="M18 112 L48 82 L64 96 L88 70 L120 112 Z" fill="%s" fill-opacity=".25"/>'
                 '<path d="M58 50 C100 34 140 58 166 94" fill="none" stroke="%s" stroke-width="2" stroke-opacity=".45" '
                 'stroke-linecap="round" stroke-dasharray="2 6"/><circle cx="166" cy="94" r="7" fill="%s" fill-opacity=".45"/>'
                 '<path d="M58 50 C100 36 150 42 176 62" fill="none" stroke="%s" stroke-width="2.4" stroke-linecap="round"/>'
-                '<circle cx="180" cy="64" r="13" fill="%s" stroke="%s" stroke-width="2"/>'
+                '<path class="tr" d="M58 50 C100 36 150 42 176 62" fill="none" stroke="%s" stroke-width="4" '
+                'stroke-linecap="round" pathLength="100"/>'
+                '<g class="bl"><circle cx="180" cy="64" r="13" fill="%s" stroke="%s" stroke-width="2"/>'
                 '<path d="M172 55 Q178 64 172 73 M188 55 Q182 64 188 73" fill="none" stroke="%s" stroke-width="1.6" '
-                'stroke-linecap="round" stroke-dasharray="2 2.4"/>' % (tint, v, v, d, c["card"], d, d))
+                'stroke-linecap="round" stroke-dasharray="2 2.4"/></g>' % (tint, v, v, d, d, c["card"], d, d))
     # next: an open seat
     return ('<circle cx="107" cy="58" r="34" fill="none" stroke="%s" stroke-width="2" stroke-dasharray="5 6"/>%s'
             % (c["muted"], t("?", SANS, 700, 44, 107, 74, c["muted"], anchor="middle")))
+
+
+# a slow loop per drawing; SVGs inside <img> on GitHub can animate with CSS but cannot react to hover
+FB = "transform-box:fill-box;transform-origin:center;"
+MOTION = {
+    "car": ".bx{animation:blink 1.8s ease-in-out infinite}.bx rect{animation:march 1s linear infinite}"
+           "@keyframes blink{50%{opacity:.3}}@keyframes march{to{stroke-dashoffset:-8}}",
+    "route": ".rt{animation:walk 1.4s linear infinite}@keyframes walk{to{stroke-dashoffset:-16}}",
+    "awning": ".pr{animation:bob 2.4s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-4px)}}",
+    "voronoi": ".vc,.ry{animation:pulse 2.6s ease-in-out infinite}@keyframes pulse{50%{opacity:.55}}",
+    "leaf": ".lf{transform-box:fill-box;transform-origin:0 0;animation:sway 3.2s ease-in-out infinite}"
+            ".cl{animation:drift 5s ease-in-out infinite alternate}"
+            "@keyframes sway{50%{transform:rotate(-7deg)}}@keyframes drift{to{transform:translateX(10px)}}",
+    "wave": ".wb{" + FB + "animation:eq 1.2s ease-in-out infinite alternate}"
+            "@keyframes eq{from{transform:scaleY(.4)}to{transform:scaleY(1)}}",
+    "metro": ".tn{stroke-dasharray:9 100;stroke-dashoffset:9;animation:run 4s linear infinite}"
+             "@keyframes run{to{stroke-dashoffset:-100}}",
+    "baseball": ".tr{stroke-dasharray:10 100;stroke-dashoffset:10;animation:run 2.2s ease-in infinite}"
+                ".bl{" + FB + "animation:spin 2.2s linear infinite}"
+                "@keyframes run{70%,to{stroke-dashoffset:-100}}@keyframes spin{to{transform:rotate(360deg)}}",
+}
 
 
 def card(c, h, nxt=False):
@@ -231,6 +257,8 @@ def card(c, h, nxt=False):
          '<g clip-path="url(#k)"><rect x="0" y="0" width="%d" height="118" fill="%s" fill-opacity="%s"/></g>' % (
              W, c["tint"], c["levels"][4])]
     b.append(motif(h.get("motif", "next"), c))
+    if h.get("motif") in MOTION:
+        b.append("<style>%s@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>" % MOTION[h["motif"]])
     # the medal
     big = h.get("big", "?")
     if not nxt:
